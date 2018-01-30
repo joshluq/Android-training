@@ -35,32 +35,22 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
         ButterKnife.bind(this);
     }
-    @OnClick(R.id.btnBuy)
-    public void Buy()
-    {
-        if(etDni.getText().toString().trim().length()<8)
-        {
-            Toast.makeText(this, "DNI debe ser de 8 digitos", Toast.LENGTH_SHORT).show();
-        }
-        else
-        {
-            if (etPhone.getText().toString().trim().length()<9)
-            {
-                Toast.makeText(this, "El número debe ser de 9 digitos", Toast.LENGTH_SHORT).show();
-            }
-            else
-            {
-                if(etName.getText().toString().equals("Everis") && etDni.getText().toString().equals("12345678") && etPhone.getText().toString().equals("123456789"))
-                {
-                    Intent intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
-                }
-                else
-                {
-                    Toast.makeText(this, "Ingrese correctamente sus credenciales", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }
 
+    @OnClick(R.id.btnBuy)
+    public void Buy() {
+        String name = etName.getText().toString().trim();
+        String dni = etDni.getText().toString().trim();
+        String phone = etPhone.getText().toString().trim();
+
+        if (dni.length() < 8) {
+            Toast.makeText(this, "DNI debe ser de 8 digitos", Toast.LENGTH_SHORT).show();
+        } else if (phone.length() < 9) {
+            Toast.makeText(this, "El número debe ser de 9 digitos", Toast.LENGTH_SHORT).show();
+        } else if (name.equals("Everis") && dni.equals("12345678") && phone.equals("123456789")) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        } else {
+            Toast.makeText(this, "Ingrese correctamente sus credenciales", Toast.LENGTH_SHORT).show();
+        }
     }
 }

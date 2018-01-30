@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
+    android:padding="@dimen/dimen_pago"
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center"
@@ -11,7 +11,7 @@
 
     <TextView
         android:textStyle="bold"
-        android:textSize="36sp"
+        android:textSize="@dimen/dimen_textview"
         android:text="@string/text"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

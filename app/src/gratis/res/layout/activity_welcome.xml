@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="25dp"
+    android:padding="@dimen/dimen_gratis"
     tools:context="com.example.adiosesr.androidtraining.gratis.WelcomeActivity">
 
     <EditText
