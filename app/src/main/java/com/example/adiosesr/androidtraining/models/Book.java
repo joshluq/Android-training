@@ -1,10 +1,9 @@
 package com.example.adiosesr.androidtraining.models;
 
-/**
- * Created by adiosesr on 30/01/2018.
- */
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
     private Integer Id;
     private String name;
     private Integer pages;
@@ -41,4 +40,6 @@ public class Book {
     public void setAutor(Autor autor) {
         this.autor = autor;
     }
+
+
 }

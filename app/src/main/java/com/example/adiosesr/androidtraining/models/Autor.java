@@ -1,9 +1,5 @@
 package com.example.adiosesr.androidtraining.models;
 
-/**
- * Created by adiosesr on 30/01/2018.
- */
-
 public class Autor {
     private String firstName;
     private String lastName;
