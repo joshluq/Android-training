@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import com.example.adiosesr.androidtraining.models.Autor;
 import com.example.adiosesr.androidtraining.models.Book;
+import com.example.adiosesr.androidtraining.util.Extras;
 import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle bundle = new Bundle();
 
-        bundle.putSerializable("books",book);
-        bundle.putString("nameFrag", getDataName());
-        bundle.putSerializable("listBook",arrayBook(book));
+        bundle.putSerializable(Extras.EXTRAS_BOOKS.getExtras(),book);
+        bundle.putString(Extras.EXTRAS_DATANAME.getExtras(), getDataName());
+        bundle.putSerializable(Extras.EXTRAS_LISTBOOKS.getExtras(),arrayBook(book));
 
         bookListFragment.setArguments(bundle);
         bookFragment.setArguments(bundle);
@@ -49,11 +50,10 @@ public class MainActivity extends AppCompatActivity {
         Bundle extras = intent.getExtras();
         String dataName = null;
         if (extras != null) {
-            dataName = extras.getString("name");
+            dataName = extras.getString(Extras.EXTRAS_NAME.getExtras());
         }
         return dataName;
     }
-
 
     private ArrayList arrayBook(Book book) {
         ArrayList<Book> listBook = new ArrayList<>();
@@ -98,6 +98,4 @@ public class MainActivity extends AppCompatActivity {
 
         return a;
     }
-
-
 }

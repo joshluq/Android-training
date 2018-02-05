@@ -9,13 +9,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.adiosesr.androidtraining.models.Book;
+import com.example.adiosesr.androidtraining.util.Extras;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class BookFragment extends Fragment {
 
     @BindView(R.id.tvName)
@@ -46,10 +44,10 @@ public class BookFragment extends Fragment {
     }
     public void printBooks()
     {
-        Book b = (Book)getArguments().getSerializable("books");
+        Book b = (Book)getArguments().getSerializable(Extras.EXTRAS_BOOKS.getExtras());
 
         if(b != null) {
-            String nameShow = getArguments().getString("nameFrag");
+            String nameShow = getArguments().getString(Extras.EXTRAS_DATANAME.getExtras());
 
             tvName.setText(nameShow);
 

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.adiosesr.androidtraining"
-        minSdkVersion 19
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -19,14 +19,14 @@ android {
     }
     productFlavors {
         pago {
-            minSdkVersion 19
+            minSdkVersion 17
             applicationId 'com.example.adiosesr.androidtraining.pago'
             targetSdkVersion 26
             versionCode 1
             versionName '1.0'
         }
         gratis {
-            minSdkVersion 19
+            minSdkVersion 17
             applicationId 'com.example.adiosesr.androidtraining.gratis'
             targetSdkVersion 26
             versionCode 1

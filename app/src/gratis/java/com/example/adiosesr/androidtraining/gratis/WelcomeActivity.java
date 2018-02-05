@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.example.adiosesr.androidtraining.MainActivity;
 import com.example.adiosesr.androidtraining.R;
+import com.example.adiosesr.androidtraining.util.Extras;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,15 +42,15 @@ public class WelcomeActivity extends AppCompatActivity {
         String dni = etDni.getText().toString().trim();
         String phone = etPhone.getText().toString().trim();
         if (dni.length() < 8) {
-            Toast.makeText(this, "DNI debe ser de 8 digitos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.validateDni, Toast.LENGTH_SHORT).show();
         } else if (phone.length() < 9) {
-            Toast.makeText(this, "El número debe ser de 9 digitos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.validateDigits, Toast.LENGTH_SHORT).show();
         } else if (name.equals("Everis") && dni.equals("12345678") && phone.equals("123456789")) {
             Intent intent = new Intent(this, MainActivity.class);
-            intent.putExtra("name",name);
+            intent.putExtra(Extras.EXTRAS_NAME.getExtras(),name);
             startActivity(intent);
         } else {
-            Toast.makeText(this, "Ingrese correctamente sus credenciales", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.validateCredentials, Toast.LENGTH_SHORT).show();
         }
     }
 }

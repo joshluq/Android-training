@@ -8,13 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import com.example.adiosesr.androidtraining.models.Book;
+import com.example.adiosesr.androidtraining.util.Extras;
 import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
-/**
- * A simple {@link Fragment} subclass.
- */
 
 public class BookListFragment extends Fragment {
 
@@ -48,7 +45,7 @@ public class BookListFragment extends Fragment {
 
     @SuppressWarnings("unchecked cast")
     private void listBooks() {
-        List<Book>listaBook = (List<Book>) getArguments().getSerializable("listBook");
+        List<Book>listaBook = (List<Book>) getArguments().getSerializable(Extras.EXTRAS_LISTBOOKS.getExtras());
         if(listaBook !=null) {
             tv1.setText(String.format("1.%s", String.valueOf(listaBook.get(0).getName())));
             tv2.setText(String.format("2.%s", String.valueOf(listaBook.get(1).getId())));
@@ -61,7 +58,6 @@ public class BookListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_book_list, container, false);
     }
 }
