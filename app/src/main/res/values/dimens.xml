@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sizeButton">172dp</dimen>
+    <dimen name="dimeFragBook">30sp</dimen>
+    <dimen name="sizeLayout">20dp</dimen>
+</resources>
