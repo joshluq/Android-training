@@ -8,4 +8,15 @@
     <string name="validateDni">DNI debe ser de 8 digitos</string>
     <string name="validateDigits">El número debe ser de 9 digitos</string>
     <string name="validateCredentials">Ingrese correctamente sus credenciales</string>
+    <string name="nameBook">Nombre de Libro</string>
+    <string name="detailBook">Fecha publicacion, numero de paginas</string>
+    <string name="buttonBuy">COMPRAR LIBRO</string>
+    <string name="introductionBook">Introducción del libro mostrado</string>
+    <string name="buttonExpand">Expandir</string>
+    <string name="qualifyBook">Califica el Libro</string>
+    <string name="reviewPublic">Las reseñas son pública y pueden editarse. El programador puede ver las ediciones anteriores, a menos que borres toda la reseña</string>
+    <string name="tag1">15,993</string>
+    <string name="tag2">92%</string>
+    <string name="tag3">Similares</string>
+    <string name="tag4">Drama</string>
 </resources>

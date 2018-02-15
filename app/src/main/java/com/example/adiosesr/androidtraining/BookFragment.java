@@ -39,22 +39,23 @@ public class BookFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        ButterKnife.bind(this,view);
-        printBooks();
+      ButterKnife.bind(this,view);
+      printBooks();
     }
+
     public void printBooks()
     {
-        Book b = (Book)getArguments().getSerializable(Extras.EXTRAS_BOOKS.getExtras());
+        Book b = (Book)getArguments().getSerializable(Extras.EXTRAS_BOOKS.getExtra());
 
         if(b != null) {
-            String nameShow = getArguments().getString(Extras.EXTRAS_DATANAME.getExtras());
+            String nameShow = getArguments().getString(Extras.EXTRAS_DATANAME.getExtra());
 
             tvName.setText(nameShow);
 
             valorId.setText(String.valueOf(b.getId()));
             valorNameBook.setText(b.getName());
             valorPage.setText(String.valueOf(b.getPages()));
-            valorAutor.setText(String.format("%s %s", b.getAutor().getFirstName(), b.getAutor().getLastName()));
+            valorAutor.setText(String.format("%s %s", b.getAuthor().getFirstName(), b.getAuthor().getLastName()));
         }
     }
 

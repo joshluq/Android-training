@@ -5,10 +5,13 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
-import com.example.adiosesr.androidtraining.models.Autor;
+
+import com.example.adiosesr.androidtraining.models.Author;
 import com.example.adiosesr.androidtraining.models.Book;
 import com.example.adiosesr.androidtraining.util.Extras;
+
 import java.util.ArrayList;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -36,13 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle bundle = new Bundle();
 
-        bundle.putSerializable(Extras.EXTRAS_BOOKS.getExtras(),book);
-        bundle.putString(Extras.EXTRAS_DATANAME.getExtras(), getDataName());
-        bundle.putSerializable(Extras.EXTRAS_LISTBOOKS.getExtras(),arrayBook(book));
+        bundle.putSerializable(Extras.EXTRAS_BOOKS.getExtra(), book);
+        bundle.putString(Extras.EXTRAS_DATANAME.getExtra(), getDataName());
+        bundle.putSerializable(Extras.EXTRAS_LISTBOOKS.getExtra(), arrayBook(book));
 
         bookListFragment.setArguments(bundle);
         bookFragment.setArguments(bundle);
-
     }
 
     private String getDataName() {
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle extras = intent.getExtras();
         String dataName = null;
         if (extras != null) {
-            dataName = extras.getString(Extras.EXTRAS_NAME.getExtras());
+            dataName = extras.getString(Extras.EXTRAS_NAME.getExtra());
         }
         return dataName;
     }
@@ -62,37 +64,43 @@ public class MainActivity extends AppCompatActivity {
         listBook.add(book);
         listBook.add(book);
         listBook.add(book);
+        listBook.add(book);
+        listBook.add(book);
+        listBook.add(book);
+        listBook.add(book);
+        listBook.add(book);
+        listBook.add(book);
+        listBook.add(book);
 
-        return  listBook;
+        return listBook;
     }
 
     @OnClick(R.id.btnBook)
-    public void frameBook()
-    {
+    public void frameBook() {
         FragmentTransaction frag = getSupportFragmentManager().beginTransaction();
-        frag.replace(R.id.fragmentBook,bookFragment);
+        frag.replace(R.id.fragmentBook, bookFragment);
         frag.commit();
     }
 
     @OnClick(R.id.btnList)
-    public void frameList()
-    {
+    public void frameList() {
         FragmentTransaction frag = getSupportFragmentManager().beginTransaction();
-        frag.replace(R.id.fragmentBook,bookListFragment);
+        frag.replace(R.id.fragmentBook, bookListFragment);
         frag.commit();
     }
 
     private Book buildBook() {
         Book b = new Book();
         b.setId(233);
-        b.setName("Java in Android");
+        b.setName("Android");
+        b.setDescription("Developer for mobiles");
         b.setPages(520);
-        b.setAutor(buildAutor());
-        return  b;
+        b.setAuthor(buildAutor());
+        return b;
     }
 
-    private Autor buildAutor() {
-        Autor a = new Autor();
+    private Author buildAutor() {
+        Author a = new Author();
         a.setFirstName("Arthur");
         a.setLastName("Dioses");
 

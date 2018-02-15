@@ -1,6 +1,6 @@
 package com.example.adiosesr.androidtraining.models;
 
-public class Autor {
+public class Author {
     private String firstName;
     private String lastName;
 

@@ -3,4 +3,27 @@
     <dimen name="sizeButton">172dp</dimen>
     <dimen name="dimeFragBook">30sp</dimen>
     <dimen name="sizeLayout">20dp</dimen>
+    <dimen name="sizeTitleList">20sp</dimen>
+    <dimen name="sizeDetailList">10sp</dimen>
+    <dimen name="dimenEightdp">8dp</dimen>
+    <dimen name="sizeBtnBuy">15sp</dimen>
+    <dimen name="dimenSixteendp">16dp</dimen>
+    <dimen name="dimenZerodp">0dp</dimen>
+    <dimen name="dimenThreedp">3dp</dimen>
+    <dimen name="hundredFifty">150dp</dimen>
+    <dimen name="dimenFifty">50dp</dimen>
+    <dimen name="dimenThirtyTwodp">32dp</dimen>
+    <dimen name="dimenTwodp">2dp</dimen>
+    <dimen name="dimenFourdp">4dp</dimen>
+    <dimen name="dimenOnedp">1dp</dimen>
+    <dimen name="dimenTendp">10dp</dimen>
+    <dimen name="sizeCalificate">18sp</dimen>
+    <dimen name="dimenFifteendp">15sp</dimen>
+    <dimen name="Eightydp">80dp</dimen>
+    <dimen name="HundredThirtydp">130dp</dimen>
+    <dimen name="sizeIntroduction">20sp</dimen>
+    <dimen name="hundredTendp">110dp</dimen>
+    <dimen name="dimenTwentydp">20dp</dimen>
+    <dimen name="HundredNinety">190dp</dimen>
+    <dimen name="HundredFourty">140dp</dimen>
 </resources>
