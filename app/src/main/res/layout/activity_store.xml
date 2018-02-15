@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.adiosesr.androidtraining.StoreActivity">
+
+        <ImageView
+            android:id="@+id/ivBanner"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="@dimen/HundredThirtydp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+
+        <ImageView
+            android:id="@+id/ivFront"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="@dimen/hundredFifty"
+            android:layout_marginBottom="@dimen/dimenEightdp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBanner"
+            app:layout_constraintDimensionRatio="w,2:3"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBanner"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/tvNameBook"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            android:text="@string/nameBook"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:layout_constraintEnd_toStartOf="@+id/ibIcon"
+            app:layout_constraintStart_toEndOf="@+id/ivFront"
+            app:layout_constraintTop_toBottomOf="@+id/ivBanner" />
+
+        <ImageButton
+            android:id="@+id/ibIcon"
+            android:layout_width="@dimen/dimenFifty"
+            android:layout_height="@dimen/dimenFifty"
+            android:layout_marginEnd="@dimen/dimenSixteendp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBanner"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/tvDetailBook"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            android:layout_marginTop="@dimen/dimenThreedp"
+            android:text="@string/detailBook"
+            app:layout_constraintEnd_toStartOf="@+id/ibIcon"
+            app:layout_constraintStart_toEndOf="@+id/ivFront"
+            app:layout_constraintTop_toBottomOf="@+id/tvNameBook" />
+
+        <Button
+            android:id="@+id/btnBuy"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="@dimen/dimenFifty"
+            android:layout_marginEnd="@dimen/dimenFourdp"
+            android:layout_marginStart="@dimen/dimenFourdp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/buttonBuy"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailBook" />
+
+        <View
+            android:id="@+id/viewFirst"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="@dimen/dimenOnedp"
+            android:layout_marginEnd="@dimen/dimenSixteendp"
+            android:layout_marginStart="@dimen/dimenSixteendp"
+            android:layout_marginTop="@dimen/dimenTendp"
+            android:background="@color/colorGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnBuy" />
+
+        <ImageButton
+            android:id="@+id/ibTag01"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            app:layout_constraintEnd_toStartOf="@+id/ibTag02"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewFirst"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <ImageButton
+            android:id="@+id/ibTag02"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            app:layout_constraintEnd_toStartOf="@+id/ibTag03"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ibTag01"
+            app:layout_constraintTop_toTopOf="@+id/ibTag01"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <ImageButton
+            android:id="@+id/ibTag03"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            app:layout_constraintEnd_toStartOf="@+id/ibTag04"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ibTag02"
+            app:layout_constraintTop_toTopOf="@+id/ibTag02"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <ImageButton
+            android:id="@+id/ibTag04"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/ibTag03"
+            app:layout_constraintTop_toTopOf="@+id/ibTag03"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/tvTag01"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginLeft="@dimen/dimenSixteendp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            android:layout_marginTop="@dimen/dimenFourdp"
+            android:gravity="center"
+            android:text="@string/tag1"
+            app:layout_constraintEnd_toEndOf="@+id/ibTag01"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/ibTag01"
+            app:layout_constraintTop_toBottomOf="@+id/ibTag01" />
+
+        <TextView
+            android:id="@+id/tvTag02"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            android:layout_marginTop="@dimen/dimenFourdp"
+            android:gravity="center"
+            android:text="@string/tag2"
+            app:layout_constraintEnd_toEndOf="@+id/ibTag02"
+            app:layout_constraintStart_toStartOf="@+id/ibTag02"
+            app:layout_constraintTop_toBottomOf="@+id/ibTag02" />
+
+        <TextView
+            android:id="@+id/tvTag03"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            android:layout_marginTop="@dimen/dimenFourdp"
+            android:gravity="center"
+            android:text="@string/tag3"
+            app:layout_constraintEnd_toEndOf="@+id/ibTag03"
+            app:layout_constraintStart_toStartOf="@+id/ibTag03"
+            app:layout_constraintTop_toBottomOf="@+id/ibTag03" />
+
+        <TextView
+            android:id="@+id/tvTag04"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            android:layout_marginTop="@dimen/dimenFourdp"
+            android:gravity="center"
+            android:text="@string/tag4"
+            app:layout_constraintEnd_toEndOf="@+id/ibTag04"
+            app:layout_constraintStart_toStartOf="@+id/ibTag04"
+            app:layout_constraintTop_toBottomOf="@+id/ibTag04" />
+
+
+        <View
+            android:id="@+id/viewTwo"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="@dimen/dimenOnedp"
+            android:layout_marginEnd="@dimen/dimenSixteendp"
+            android:layout_marginStart="@dimen/dimenSixteendp"
+            android:layout_marginTop="@dimen/dimenTendp"
+            android:background="@color/colorGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTag02" />
+
+        <TextView
+            android:id="@+id/tvIntroductionBook"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenThirtyTwodp"
+            android:layout_marginStart="@dimen/dimenThirtyTwodp"
+            android:layout_marginTop="@dimen/dimenEightdp"
+            android:text="@string/introductionBook"
+            android:textSize="@dimen/sizeIntroduction"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewTwo" />
+
+        <Button
+            android:id="@+id/btnRead"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/HundredFourty"
+            android:layout_marginStart="@dimen/HundredFourty"
+            android:layout_marginTop="@dimen/dimenTendp"
+            android:background="@android:color/transparent"
+            android:text="@string/buttonExpand"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/dimenTwentydp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvIntroductionBook" />
+
+        <View
+            android:id="@+id/viewThre"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="@dimen/dimenOnedp"
+            android:layout_marginEnd="@dimen/dimenSixteendp"
+            android:layout_marginStart="@dimen/dimenSixteendp"
+            android:layout_marginTop="@dimen/dimenTendp"
+            android:background="@color/colorGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnRead" />
+
+        <ImageView
+            android:id="@+id/ibUser"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/HundredNinety"
+            android:layout_marginStart="@dimen/HundredNinety"
+            android:layout_marginTop="@dimen/dimenTwentydp"
+            android:src="@mipmap/ic_launcher_round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.402"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewThre" />
+
+        <TextView
+            android:id="@+id/tvQualfy"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/hundredTendp"
+            android:layout_marginStart="@dimen/hundredTendp"
+            android:layout_marginTop="@dimen/dimenEightdp"
+            android:gravity="center"
+            android:text="@string/qualifyBook"
+            android:textSize="@dimen/sizeCalificate"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ibUser" />
+
+        <RatingBar
+            android:id="@+id/Ratin01"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/Eightydp"
+            android:layout_marginStart="@dimen/Eightydp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvQualfy" />
+
+        <TextView
+            android:id="@+id/tvReviewPulic"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            android:text="@string/reviewPublic"
+            android:textSize="@dimen/dimenFifteendp"
+            app:layout_constraintEnd_toEndOf="@+id/Ratin01"
+            app:layout_constraintStart_toStartOf="@+id/Ratin01"
+            app:layout_constraintTop_toBottomOf="@+id/Ratin01" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

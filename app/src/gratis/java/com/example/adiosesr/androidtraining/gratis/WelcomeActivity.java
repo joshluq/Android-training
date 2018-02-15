@@ -16,7 +16,6 @@ import butterknife.OnClick;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-
     @BindView(R.id.etName)
     EditText etName;
 
@@ -47,7 +46,7 @@ public class WelcomeActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.validateDigits, Toast.LENGTH_SHORT).show();
         } else if (name.equals("Everis") && dni.equals("12345678") && phone.equals("123456789")) {
             Intent intent = new Intent(this, MainActivity.class);
-            intent.putExtra(Extras.EXTRAS_NAME.getExtras(),name);
+            intent.putExtra(Extras.EXTRAS_NAME.getExtra(),name);
             startActivity(intent);
         } else {
             Toast.makeText(this, R.string.validateCredentials, Toast.LENGTH_SHORT).show();
