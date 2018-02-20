@@ -1,7 +1,6 @@
 package com.example.adiosesr.androidtraining;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -39,9 +38,9 @@ public class BookListFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ButterKnife.bind(this,view);
+        ButterKnife.bind(this, view);
 
 
         mService = ApiUtil.getService();
@@ -51,11 +50,13 @@ public class BookListFragment extends Fragment {
                 //Empty
             }
         });
-        RecyclerView.LayoutManager layout =  new LinearLayoutManager(this.getContext());
+        RecyclerView.LayoutManager layout = new LinearLayoutManager(this.getContext());
         rvBook.setLayoutManager(layout);
         rvBook.setAdapter(mAdapater);
         rvBook.setHasFixedSize(true);
-        RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this.getContext(),DividerItemDecoration.VERTICAL);
+        RecyclerView.ItemDecoration itemDecoration =
+                new DividerItemDecoration(this.getContext(),
+                        DividerItemDecoration.VERTICAL);
         rvBook.addItemDecoration(itemDecoration);
 
         fillList();
@@ -75,9 +76,7 @@ public class BookListFragment extends Fragment {
                 if (response.isSuccessful()) {
                     mAdapater.updateBooks(response.body().getBody().getBooks());
                     Log.d(LOGTAG, "Loaded ");
-                }
-                else
-                {
+                } else {
                     Log.d(LOGTAG, " Problem ");
                 }
             }

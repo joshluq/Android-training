@@ -35,17 +35,9 @@ public class Book implements Serializable {
     @SerializedName("banner")
     private String banner;
 
-    //Para pruebas
-    public Book(String name, String description) {
-
-        this.name = name;
-        this.description = description;
-    }
-
     public Book() {
     }
 
-    //
     public Integer getId() {
         return id;
     }

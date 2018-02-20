@@ -1,43 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/tvTitleBook"
-        android:layout_width="@dimen/dimenWidth"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimenEightdp"
-        android:layout_marginTop="@dimen/dimenEightdp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
         android:textSize="@dimen/sizeTitleList"
         android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/tvLabel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@tools:sample/full_names" />
 
     <TextView
-        android:id="@+id/tvDescBook"
-        android:layout_width="@dimen/dimenWidth"
+        android:id="@+id/tvLabel"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dimenFourdp"
-        android:layout_marginStart="@dimen/dimenEightdp"
-        android:layout_marginTop="@dimen/dimenFourdp"
-        android:gravity="center"
-        android:textSize="@dimen/sizeDetailList"
-        app:layout_constraintStart_toStartOf="@+id/tvTitleBook"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleBook"
-        tools:text="@tools:sample/cities" />
+        android:text="@string/labelSoles"
+        app:layout_constraintStart_toStartOf="@+id/ivBook"
+        app:layout_constraintTop_toTopOf="@+id/tvTitleBook" />
 
-    <!--<ImageView-->
-        <!--android:id="@+id/ivBook"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginEnd="@dimen/dimenTwodp"-->
-        <!--android:src="@mipmap/ic_launcher_round"-->
-        <!--app:layout_constraintBottom_toBottomOf="@+id/tvDescBook"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="@+id/tvTitleBook" />-->
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tvLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvLabel"
+        tools:text="@tools:sample/date/hhmm" />
+
+    <TextView
+        android:id="@+id/tvTag01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTag03"
+        app:layout_constraintEnd_toStartOf="@+id/tvTag02"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleBook"
+        tools:text="@tools:sample/last_names" />
+
+    <TextView
+        android:id="@+id/tvTag02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/tvTag03"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTag01"
+        app:layout_constraintTop_toTopOf="@+id/tvTag01"
+        tools:text="@tools:sample/last_names" />
+
+    <TextView
+        android:id="@+id/tvTag03"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleBook"
+        app:layout_constraintEnd_toStartOf="@+id/ivBook"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTag02"
+        app:layout_constraintTop_toTopOf="@+id/tvTag02"
+        tools:text="@tools:sample/last_names" />
+
+
+    <ImageView
+        android:id="@+id/ivBook"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabel"
+        tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>
