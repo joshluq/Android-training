@@ -27,18 +27,17 @@
         android:layout_marginTop="@dimen/dimenFourdp"
         android:gravity="center"
         android:textSize="@dimen/sizeDetailList"
-        app:layout_constraintEnd_toStartOf="@+id/ivBook"
         app:layout_constraintStart_toStartOf="@+id/tvTitleBook"
         app:layout_constraintTop_toBottomOf="@+id/tvTitleBook"
         tools:text="@tools:sample/cities" />
 
-    <ImageView
-        android:id="@+id/ivBook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dimenTwodp"
-        android:src="@mipmap/ic_launcher_round"
-        app:layout_constraintBottom_toBottomOf="@+id/tvDescBook"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvTitleBook" />
+    <!--<ImageView-->
+        <!--android:id="@+id/ivBook"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginEnd="@dimen/dimenTwodp"-->
+        <!--android:src="@mipmap/ic_launcher_round"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/tvDescBook"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/tvTitleBook" />-->
 </android.support.constraint.ConstraintLayout>

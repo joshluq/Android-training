@@ -1,8 +1,13 @@
 package com.example.adiosesr.androidtraining.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Tag {
+    @SerializedName("id")
     private Long idTag;
+    @SerializedName("name")
     private String nameTag;
+
     private String imageTag;
 
     public Long getIdTag() {
