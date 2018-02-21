@@ -5,66 +5,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="@dimen/dimen_gratis"
     tools:context="com.example.adiosesr.androidtraining.gratis.WelcomeActivity">
 
-    <EditText
-        android:id="@+id/etName"
+    <TextView
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="@dimen/dimenTwentydp"
+        android:id="@+id/tvText"
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dimenEightdp"
-        android:layout_marginStart="@dimen/dimenEightdp"
-        android:layout_marginTop="@dimen/dimenSixteendp"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        android:hint="@string/name"
-        android:inputType="textPersonName"
-        android:singleLine="true"
+        android:layout_marginTop="24dp"
+        android:text="@string/textFlavor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/etDni"
-        android:layout_width="@dimen/dimenWidth"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/dimenZerodp"
-        android:layout_marginTop="@dimen/dimenEightdp"
-        android:hint="@string/dni"
-        android:inputType="number"
-        android:maxLength="8"
-        android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="@+id/etName"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/etName"
-        app:layout_constraintTop_toBottomOf="@+id/etName" />
-
-    <EditText
-        android:id="@+id/etPhone"
-        android:layout_width="@dimen/dimenWidth"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimenEightdp"
-        android:hint="@string/phone"
-        android:inputType="number"
-        android:maxLength="9"
-        android:singleLine="true"
-        app:layout_constraintEnd_toEndOf="@+id/etDni"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/etDni"
-        app:layout_constraintTop_toBottomOf="@+id/etDni" />
-
     <Button
-        android:textStyle="bold"
-        android:textSize="@dimen/sizeBtnBuy"
         android:id="@+id/btnBuy"
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimenTwentyFour"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
         android:background="@color/colorPrimary"
         android:text="@string/buttonFlavor"
-        app:layout_constraintEnd_toEndOf="@+id/etPhone"
-        app:layout_constraintStart_toStartOf="@+id/etPhone"
-        app:layout_constraintTop_toBottomOf="@+id/etPhone" />
+        android:textSize="@dimen/sizeBtnBuy"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tvText"
+        app:layout_constraintStart_toStartOf="@+id/tvText"
+        app:layout_constraintTop_toBottomOf="@+id/tvText" />
+
+    <Button
+        android:textColor="@color/colorPrimary"
+        android:background="@color/colorWhite"
+        android:id="@+id/btnSkip"
+        android:layout_width="@dimen/dimenWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/buttonSkip"
+        app:layout_constraintEnd_toEndOf="@+id/btnBuy"
+        app:layout_constraintTop_toBottomOf="@+id/btnBuy" />
 
 </android.support.constraint.ConstraintLayout>

@@ -16,13 +16,13 @@
         android:gravity="center"
         android:textSize="@dimen/sizeTitleList"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/tvLabel"
+        app:layout_constraintEnd_toStartOf="@+id/tvSimbol"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@tools:sample/full_names" />
 
     <TextView
-        android:id="@+id/tvLabel"
+        android:id="@+id/tvSimbol"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/labelSoles"
@@ -33,8 +33,8 @@
         android:id="@+id/tvPrice"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@+id/tvLabel"
-        app:layout_constraintTop_toTopOf="@+id/tvLabel"
+        app:layout_constraintStart_toEndOf="@+id/tvSimbol"
+        app:layout_constraintTop_toTopOf="@+id/tvSimbol"
         tools:text="@tools:sample/date/hhmm" />
 
     <TextView
@@ -78,11 +78,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginTop="4dp"
         android:src="@mipmap/ic_launcher_round"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvSimbol"
         tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>

@@ -2,7 +2,9 @@ package com.example.adiosesr.androidtraining.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Author {
+import java.io.Serializable;
+
+public class Author implements Serializable {
 
     @SerializedName("first_Name")
     private String firstName;

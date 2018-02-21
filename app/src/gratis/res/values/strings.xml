@@ -1,7 +1,8 @@
 <resources>
-    <string name="textFlavor">Gratis Flavor</string>
+    <string name="textFlavor">Para una mejor experiencia, comprar el app</string>
     <string name="buttonFlavor">Comprar App</string>
     <string name="name">Name</string>
     <string name="dni">DNI</string>
     <string name="phone">Teléfono</string>
+    <string name="buttonSkip">Saltar</string>
 </resources>

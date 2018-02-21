@@ -26,4 +26,5 @@
     <dimen name="dimenTwentydp">20dp</dimen>
     <dimen name="HundredNinety">190dp</dimen>
     <dimen name="HundredFourty">140dp</dimen>
+    <dimen name="dimenWidth">0dp</dimen>
 </resources>

@@ -71,35 +71,17 @@
             app:layout_constraintStart_toEndOf="@+id/ivFront"
             app:layout_constraintTop_toBottomOf="@+id/tvNameBook" />
 
-        <Button
-            android:id="@+id/btnBuy"
-            android:layout_width="@dimen/dimenWidth"
-            android:layout_height="@dimen/dimenFifty"
-            android:layout_marginEnd="@dimen/dimenFourdp"
-            android:layout_marginStart="@dimen/dimenFourdp"
-            android:layout_marginTop="@dimen/dimenSixteendp"
-            android:background="@color/colorPrimaryDark"
-            android:text="@string/buttonBuy"
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDetailBook" />
-
         <View
             android:id="@+id/viewFirst"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="@dimen/dimenOnedp"
             android:layout_marginEnd="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenSixteendp"
-            android:layout_marginTop="@dimen/dimenTendp"
+            android:layout_marginTop="16dp"
             android:background="@color/colorGray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnBuy" />
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailBook" />
 
         <ImageButton
             android:id="@+id/ibTag01"
@@ -130,24 +112,12 @@
             android:id="@+id/ibTag03"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimenEightdp"
-            android:layout_marginStart="@dimen/dimenEightdp"
-            app:layout_constraintEnd_toStartOf="@+id/ibTag04"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/ibTag02"
-            app:layout_constraintTop_toTopOf="@+id/ibTag02"
-            app:srcCompat="@mipmap/ic_launcher_round" />
-
-        <ImageButton
-            android:id="@+id/ibTag04"
-            android:layout_width="@dimen/dimenWidth"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="@dimen/dimenEightdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/ibTag03"
-            app:layout_constraintTop_toTopOf="@+id/ibTag03"
+            app:layout_constraintStart_toEndOf="@+id/ibTag02"
+            app:layout_constraintTop_toTopOf="@+id/ibTag02"
             app:srcCompat="@mipmap/ic_launcher_round" />
 
         <TextView
@@ -191,20 +161,6 @@
             app:layout_constraintStart_toStartOf="@+id/ibTag03"
             app:layout_constraintTop_toBottomOf="@+id/ibTag03" />
 
-        <TextView
-            android:id="@+id/tvTag04"
-            android:layout_width="@dimen/dimenWidth"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimenEightdp"
-            android:layout_marginStart="@dimen/dimenEightdp"
-            android:layout_marginTop="@dimen/dimenFourdp"
-            android:gravity="center"
-            android:text="@string/tag4"
-            app:layout_constraintEnd_toEndOf="@+id/ibTag04"
-            app:layout_constraintStart_toStartOf="@+id/ibTag04"
-            app:layout_constraintTop_toBottomOf="@+id/ibTag04" />
-
-
         <View
             android:id="@+id/viewTwo"
             android:layout_width="@dimen/dimenWidth"
@@ -231,33 +187,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewTwo" />
 
-        <Button
-            android:id="@+id/btnRead"
-            android:layout_width="@dimen/dimenWidth"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/HundredFourty"
-            android:layout_marginStart="@dimen/HundredFourty"
-            android:layout_marginTop="@dimen/dimenTendp"
-            android:background="@android:color/transparent"
-            android:text="@string/buttonExpand"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/dimenTwentydp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvIntroductionBook" />
-
         <View
             android:id="@+id/viewThre"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="@dimen/dimenOnedp"
             android:layout_marginEnd="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenSixteendp"
-            android:layout_marginTop="@dimen/dimenTendp"
+            android:layout_marginTop="16dp"
             android:background="@color/colorGray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnRead" />
+            app:layout_constraintTop_toBottomOf="@+id/tvIntroductionBook" />
 
         <ImageView
             android:id="@+id/ibUser"

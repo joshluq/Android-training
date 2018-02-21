@@ -1,5 +1,5 @@
 <resources>
-    <string name="textFlavor">Pago Flavor</string>
+    <string name="textFlavor">Bienvenido</string>
     <string name="buttonFlavor">Listo</string>
     <string name="text">Gracias por su Compra</string>
 </resources>
