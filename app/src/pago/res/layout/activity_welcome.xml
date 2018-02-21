@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/textFlavor"

@@ -78,7 +78,6 @@ public class BookListFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_book_list, container, false);
     }
 
-    @SuppressWarnings("unchecked cast")
     private void fillList() {
         mService.getBooks().enqueue(new Callback<BookResponse>() {
             @Override

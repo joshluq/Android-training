@@ -6,6 +6,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+
 import com.example.adiosesr.androidtraining.models.Book;
 
 import butterknife.BindView;
@@ -26,6 +27,20 @@ public class StoreActivity extends AppCompatActivity {
     TextView tvTag03;
     @BindView(R.id.tvTag03)
     TextView tvTag01;
+    @BindView(R.id.tvIntroductionBook)
+    TextView tvIntroduction;
+    @BindView(R.id.tvPage)
+    TextView tvPages;
+    @BindView(R.id.tvFirstName)
+    TextView tvFirstName;
+    @BindView(R.id.tvLastName)
+    TextView tvLastName;
+    @BindView(R.id.tvLanguage)
+    TextView tvLanguage;
+    @BindView(R.id.tvEditor)
+    TextView tvEditor;
+    @BindView(R.id.tvIsbn)
+    TextView tvIsbn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,17 +48,24 @@ public class StoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_store);
         ButterKnife.bind(this);
         book();
-
     }
-    public void book()
-    {
-      Book b = (Book) getIntent().getSerializableExtra("books");
+    public void book() {
+
+        Book b = (Book) getIntent().getSerializableExtra("books");
+
         Glide.with(this).load(b.getBanner()).into(ivBanner);
         Glide.with(this).load(b.getUrl()).into(ivFront);
         tvNameBook.setText(b.getName());
-        tvDescBook.setText(b.getDescription());
+        tvDescBook.setText(String.format(getString(R.string.labelDate),b.getPubliDate()));
+        tvLanguage.setText(b.getCountryEd());
+        tvEditor.setText(b.getEditor());
+        tvPages.setText(String.format(getString(R.string.labelPage), b.getPages()));
         tvTag01.setText(b.getTags().get(0).getNameTag());
         tvTag02.setText(b.getTags().get(1).getNameTag());
         tvTag03.setText(b.getTags().get(2).getNameTag());
+        tvIntroduction.setText(b.getDescription());
+        tvIsbn.setText(b.getIsbn());
+        tvFirstName.setText(String.format(getString(R.string.labelFistName), b.getAuthor().getFirstName()));
+        tvLastName.setText(String.format(getString(R.string.labelLastName), b.getAuthor().getLastName()));
     }
 }

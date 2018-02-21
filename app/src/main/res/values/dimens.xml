@@ -6,8 +6,10 @@
     <dimen name="sizeTitleList">20sp</dimen>
     <dimen name="sizeDetailList">10sp</dimen>
     <dimen name="dimenEightdp">8dp</dimen>
+    <dimen name="dimenEightsp">8sp</dimen>
     <dimen name="sizeBtnBuy">15sp</dimen>
     <dimen name="dimenSixteendp">16dp</dimen>
+    <dimen name="dimenSixteensp">16sp</dimen>
     <dimen name="dimenZerodp">0dp</dimen>
     <dimen name="dimenThreedp">3dp</dimen>
     <dimen name="hundredFifty">150dp</dimen>
@@ -17,6 +19,7 @@
     <dimen name="dimenFourdp">4dp</dimen>
     <dimen name="dimenOnedp">1dp</dimen>
     <dimen name="dimenTendp">10dp</dimen>
+    <dimen name="dimenTensp">10sp</dimen>
     <dimen name="sizeCalificate">18sp</dimen>
     <dimen name="dimenFifteendp">15sp</dimen>
     <dimen name="Eightydp">80dp</dimen>
@@ -24,7 +27,10 @@
     <dimen name="sizeIntroduction">20sp</dimen>
     <dimen name="hundredTendp">110dp</dimen>
     <dimen name="dimenTwentydp">20dp</dimen>
+    <dimen name="dimenTwentysp">20sp</dimen>
     <dimen name="HundredNinety">190dp</dimen>
     <dimen name="HundredFourty">140dp</dimen>
     <dimen name="dimenWidth">0dp</dimen>
+    <dimen name="dimeSixtydp">60dp</dimen>
+    <dimen name="dimenFourtydp">40dp</dimen>
 </resources>

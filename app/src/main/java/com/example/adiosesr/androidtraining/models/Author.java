@@ -6,9 +6,9 @@ import java.io.Serializable;
 
 public class Author implements Serializable {
 
-    @SerializedName("first_Name")
+    @SerializedName("first_name")
     private String firstName;
-    @SerializedName("last_Name")
+    @SerializedName("last_name")
     private String lastName;
 
     public String getFirstName() {
