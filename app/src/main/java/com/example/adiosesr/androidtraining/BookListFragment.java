@@ -18,6 +18,7 @@ import com.example.adiosesr.androidtraining.models.Book;
 import com.example.adiosesr.androidtraining.network.BookResponse;
 import com.example.adiosesr.androidtraining.network.Service;
 import com.example.adiosesr.androidtraining.util.ApiUtil;
+import com.example.adiosesr.androidtraining.util.Extras;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -55,7 +56,7 @@ public class BookListFragment extends Fragment {
                 }
                 else {
                     Intent intent = new Intent(getActivity(),StoreActivity.class);
-                    intent.putExtra("books",book);
+                    intent.putExtra(String.valueOf(Extras.EXTRAS_BOOKS),book);
                     startActivity(intent);
                 }
             }

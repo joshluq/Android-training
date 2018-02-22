@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import com.example.adiosesr.androidtraining.models.Book;
+import com.example.adiosesr.androidtraining.util.Extras;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -51,8 +52,7 @@ public class StoreActivity extends AppCompatActivity {
     }
     public void book() {
 
-        Book b = (Book) getIntent().getSerializableExtra("books");
-
+        Book b = (Book) getIntent().getSerializableExtra(String.valueOf(Extras.EXTRAS_BOOKS));
         Glide.with(this).load(b.getBanner()).into(ivBanner);
         Glide.with(this).load(b.getUrl()).into(ivFront);
         tvNameBook.setText(b.getName());
