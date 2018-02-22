@@ -1,35 +1,43 @@
 package com.example.adiosesr.androidtraining.models;
 
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.List;
 
 public class Book implements Serializable {
+
+    @SerializedName("id")
     private Integer id;
+    @SerializedName("name")
     private String name;
+    @SerializedName("pages")
     private Integer pages;
+    @SerializedName("author")
     private Author author;
+    @SerializedName("tags")
     private List<Tag> tags;
+    @SerializedName("description")
     private String description;
+    @SerializedName("publication_date")
     private String publiDate;
+    @SerializedName("isbn")
     private String isbn;
+    @SerializedName("idioma")
     private String countryEd;
+    @SerializedName("editor")
     private String numEdition;
+    @SerializedName("price")
     private Double price;
+    @SerializedName("url")
     private String url;
+    @SerializedName("banner")
     private String banner;
-
-    //Para pruebas
-    public Book(String name, String description) {
-
-        this.name = name;
-        this.description = description;
-    }
 
     public Book() {
     }
 
-    //
     public Integer getId() {
         return id;
     }
