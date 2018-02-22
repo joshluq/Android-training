@@ -52,7 +52,7 @@ public class StoreActivity extends AppCompatActivity {
     }
     public void book() {
 
-        Book b = (Book) getIntent().getSerializableExtra(String.valueOf(Extras.EXTRAS_BOOKS));
+        Book b = (Book) getIntent().getSerializableExtra(Extras.EXTRAS_BOOKS.getExtra());
         Glide.with(this).load(b.getBanner()).into(ivBanner);
         Glide.with(this).load(b.getUrl()).into(ivFront);
         tvNameBook.setText(b.getName());

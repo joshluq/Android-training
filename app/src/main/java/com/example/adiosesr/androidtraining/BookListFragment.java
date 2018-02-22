@@ -56,7 +56,7 @@ public class BookListFragment extends Fragment {
                 }
                 else {
                     Intent intent = new Intent(getActivity(),StoreActivity.class);
-                    intent.putExtra(String.valueOf(Extras.EXTRAS_BOOKS),book);
+                    intent.putExtra(Extras.EXTRAS_BOOKS.getExtra(),book);
                     startActivity(intent);
                 }
             }
