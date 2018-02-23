@@ -19,8 +19,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_launcher_round" />
-
+            app:srcCompat="@mipmap/ic_launcher_round"
+            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/ivFront"
@@ -34,7 +34,33 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivBanner"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            app:srcCompat="@mipmap/ic_launcher_round"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvTitleIsbn"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            android:layout_marginTop="@dimen/dimenEightdp"
+            android:text="@string/isbn"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/ivFront"
+            app:layout_constraintStart_toStartOf="@+id/ivFront"
+            app:layout_constraintTop_toBottomOf="@+id/ivFront" />
+
+        <TextView
+            android:id="@+id/tvIsbn"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimenTensp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitleIsbn"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="@+id/tvTitleIsbn"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleIsbn"
+            tools:text="@tools:sample/us_phones" />
 
         <TextView
             android:id="@+id/tvNameBook"
@@ -45,19 +71,9 @@
             android:layout_marginTop="@dimen/dimenSixteendp"
             android:text="@string/nameBook"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            app:layout_constraintEnd_toStartOf="@+id/ibIcon"
+            app:layout_constraintEnd_toStartOf="@+id/tvEditor"
             app:layout_constraintStart_toEndOf="@+id/ivFront"
             app:layout_constraintTop_toBottomOf="@+id/ivBanner" />
-
-        <ImageButton
-            android:id="@+id/ibIcon"
-            android:layout_width="@dimen/dimenFifty"
-            android:layout_height="@dimen/dimenFifty"
-            android:layout_marginEnd="@dimen/dimenSixteendp"
-            android:layout_marginTop="@dimen/dimenSixteendp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivBanner"
-            app:srcCompat="@mipmap/ic_launcher_round" />
 
         <TextView
             android:id="@+id/tvDetailBook"
@@ -67,39 +83,32 @@
             android:layout_marginStart="@dimen/dimenEightdp"
             android:layout_marginTop="@dimen/dimenThreedp"
             android:text="@string/detailBook"
-            app:layout_constraintEnd_toStartOf="@+id/ibIcon"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/tvNameBook"
             app:layout_constraintStart_toEndOf="@+id/ivFront"
             app:layout_constraintTop_toBottomOf="@+id/tvNameBook" />
 
-        <Button
-            android:id="@+id/btnBuy"
+        <TextView
+            android:id="@+id/tvPage"
             android:layout_width="@dimen/dimenWidth"
-            android:layout_height="@dimen/dimenFifty"
-            android:layout_marginEnd="@dimen/dimenFourdp"
-            android:layout_marginStart="@dimen/dimenFourdp"
-            android:layout_marginTop="@dimen/dimenSixteendp"
-            android:background="@color/colorPrimaryDark"
-            android:text="@string/buttonBuy"
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimenFourdp"
+            android:text="@string/numberPages"
+            app:layout_constraintEnd_toEndOf="@+id/tvDetailBook"
+            app:layout_constraintStart_toStartOf="@+id/tvDetailBook"
             app:layout_constraintTop_toBottomOf="@+id/tvDetailBook" />
 
         <View
             android:id="@+id/viewFirst"
             android:layout_width="@dimen/dimenWidth"
-            android:layout_height="@dimen/dimenOnedp"
+            android:layout_height="@dimen/dimenTendp"
             android:layout_marginEnd="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenSixteendp"
-            android:layout_marginTop="@dimen/dimenTendp"
+            android:layout_marginTop="@dimen/dimenTwentydp"
             android:background="@color/colorGray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnBuy" />
+            app:layout_constraintTop_toBottomOf="@+id/tvPage" />
 
         <ImageButton
             android:id="@+id/ibTag01"
@@ -108,11 +117,13 @@
             android:layout_marginEnd="@dimen/dimenEightdp"
             android:layout_marginStart="@dimen/dimenEightdp"
             android:layout_marginTop="@dimen/dimenSixteendp"
+            android:background="@color/colorWhite"
             app:layout_constraintEnd_toStartOf="@+id/ibTag02"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/viewFirst"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            app:srcCompat="@mipmap/ic_launcher_round"
+            tools:ignore="ContentDescription" />
 
         <ImageButton
             android:id="@+id/ibTag02"
@@ -120,11 +131,13 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenEightdp"
             android:layout_marginStart="@dimen/dimenEightdp"
+            android:background="@color/colorWhite"
             app:layout_constraintEnd_toStartOf="@+id/ibTag03"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ibTag01"
             app:layout_constraintTop_toTopOf="@+id/ibTag01"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            app:srcCompat="@mipmap/ic_launcher_round"
+            tools:ignore="ContentDescription" />
 
         <ImageButton
             android:id="@+id/ibTag03"
@@ -132,30 +145,19 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenEightdp"
             android:layout_marginStart="@dimen/dimenEightdp"
-            app:layout_constraintEnd_toStartOf="@+id/ibTag04"
+            android:background="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ibTag02"
             app:layout_constraintTop_toTopOf="@+id/ibTag02"
-            app:srcCompat="@mipmap/ic_launcher_round" />
-
-        <ImageButton
-            android:id="@+id/ibTag04"
-            android:layout_width="@dimen/dimenWidth"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimenEightdp"
-            android:layout_marginStart="@dimen/dimenEightdp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/ibTag03"
-            app:layout_constraintTop_toTopOf="@+id/ibTag03"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            app:srcCompat="@mipmap/ic_launcher_round"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/tvTag01"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenEightdp"
-            android:layout_marginLeft="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenEightdp"
             android:layout_marginTop="@dimen/dimenFourdp"
             android:gravity="center"
@@ -191,27 +193,13 @@
             app:layout_constraintStart_toStartOf="@+id/ibTag03"
             app:layout_constraintTop_toBottomOf="@+id/ibTag03" />
 
-        <TextView
-            android:id="@+id/tvTag04"
-            android:layout_width="@dimen/dimenWidth"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimenEightdp"
-            android:layout_marginStart="@dimen/dimenEightdp"
-            android:layout_marginTop="@dimen/dimenFourdp"
-            android:gravity="center"
-            android:text="@string/tag4"
-            app:layout_constraintEnd_toEndOf="@+id/ibTag04"
-            app:layout_constraintStart_toStartOf="@+id/ibTag04"
-            app:layout_constraintTop_toBottomOf="@+id/ibTag04" />
-
-
         <View
             android:id="@+id/viewTwo"
             android:layout_width="@dimen/dimenWidth"
-            android:layout_height="@dimen/dimenOnedp"
+            android:layout_height="@dimen/dimenTendp"
             android:layout_marginEnd="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenSixteendp"
-            android:layout_marginTop="@dimen/dimenTendp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
             android:background="@color/colorGray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -223,54 +211,90 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenThirtyTwodp"
             android:layout_marginStart="@dimen/dimenThirtyTwodp"
-            android:layout_marginTop="@dimen/dimenEightdp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            android:gravity="left"
             android:text="@string/introductionBook"
             android:textSize="@dimen/sizeIntroduction"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/viewTwo" />
-
-        <Button
-            android:id="@+id/btnRead"
-            android:layout_width="@dimen/dimenWidth"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/HundredFourty"
-            android:layout_marginStart="@dimen/HundredFourty"
-            android:layout_marginTop="@dimen/dimenTendp"
-            android:background="@android:color/transparent"
-            android:text="@string/buttonExpand"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/dimenTwentydp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvIntroductionBook" />
+            app:layout_constraintTop_toBottomOf="@+id/viewTwo"
+            tools:ignore="RtlHardcoded" />
 
         <View
             android:id="@+id/viewThre"
             android:layout_width="@dimen/dimenWidth"
-            android:layout_height="@dimen/dimenOnedp"
+            android:layout_height="@dimen/dimenTendp"
             android:layout_marginEnd="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenSixteendp"
-            android:layout_marginTop="@dimen/dimenTendp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
             android:background="@color/colorGray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnRead" />
+            app:layout_constraintTop_toBottomOf="@+id/tvIntroductionBook" />
+
+        <TextView
+            android:id="@+id/labelAuthor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            android:gravity="center"
+            android:text="@string/dataAuthor"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dimenTwentysp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewThre" />
+
+        <TextView
+            android:id="@+id/tvFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimenFourdp"
+            android:gravity="center"
+            android:textSize="@dimen/dimenSixteensp"
+            app:layout_constraintEnd_toEndOf="@+id/labelAuthor"
+            app:layout_constraintStart_toStartOf="@+id/labelAuthor"
+            app:layout_constraintTop_toBottomOf="@+id/labelAuthor"
+            tools:text="@tools:sample/first_names" />
+
+        <TextView
+            android:id="@+id/tvLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvFirstName"
+            app:layout_constraintStart_toStartOf="@+id/tvFirstName"
+            app:layout_constraintTop_toBottomOf="@+id/tvFirstName"
+            tools:text="@tools:sample/last_names" />
+
+        <View
+            android:id="@+id/viewFour"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="9dp"
+            android:layout_marginEnd="@dimen/dimenSixteendp"
+            android:layout_marginStart="@dimen/dimenSixteendp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            android:background="@color/colorGray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLastName" />
 
         <ImageView
-            android:id="@+id/ibUser"
+            android:id="@+id/ivUser"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/HundredNinety"
             android:layout_marginStart="@dimen/HundredNinety"
-            android:layout_marginTop="@dimen/dimenTwentydp"
+            android:layout_marginTop="8dp"
             android:src="@mipmap/ic_launcher_round"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.402"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/viewThre" />
+            app:layout_constraintTop_toBottomOf="@+id/viewFour"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/tvQualfy"
@@ -285,7 +309,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ibUser" />
+            app:layout_constraintTop_toBottomOf="@+id/ivUser" />
 
         <RatingBar
             android:id="@+id/Ratin01"
@@ -302,13 +326,40 @@
             android:id="@+id/tvReviewPulic"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimenEightdp"
-            android:layout_marginStart="@dimen/dimenEightdp"
+            android:layout_marginBottom="@dimen/dimenSixteendp"
+            android:layout_marginEnd="@dimen/dimeSixtydp"
+            android:layout_marginStart="@dimen/dimeSixtydp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            android:gravity="center"
             android:text="@string/reviewPublic"
-            android:textSize="@dimen/dimenFifteendp"
-            app:layout_constraintEnd_toEndOf="@+id/Ratin01"
-            app:layout_constraintStart_toStartOf="@+id/Ratin01"
-            app:layout_constraintTop_toBottomOf="@+id/Ratin01" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Ratin01"
+            app:layout_constraintVertical_bias="0.773" />
+
+        <TextView
+            android:id="@+id/tvLanguage"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:text="@string/language"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/dimenSixteensp"
+            app:layout_constraintEnd_toEndOf="@+id/tvEditor"
+            app:layout_constraintStart_toStartOf="@+id/tvEditor"
+            app:layout_constraintTop_toTopOf="@+id/tvNameBook" />
+
+        <TextView
+            android:id="@+id/tvEditor"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:text="@string/editor"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/dimenSixteensp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLanguage" />
 
     </android.support.constraint.ConstraintLayout>
 

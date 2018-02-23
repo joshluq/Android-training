@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.adiosesr.androidtraining.BuildConfig;
 import com.example.adiosesr.androidtraining.R;
 import com.example.adiosesr.androidtraining.models.Book;
 
@@ -22,6 +23,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
 
     private List<Book> mBooks;
     private BookClickListener mBookListener;
+
 
     public BookAdapter(BookClickListener mBookListener) {
         this.mBookListener = mBookListener;
@@ -57,6 +59,8 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         TextView tvTitle;
         @BindView(R.id.tvPrice)
         TextView tvPrice;
+        @BindView(R.id.tvSimbol)
+        TextView tvSimbol;
         @BindView(R.id.tvTag01)
         TextView tvTag01;
         @BindView(R.id.tvTag02)
@@ -70,7 +74,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         BookViewHolder(View itemView, BookClickListener bookClickListener) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-
+            itemView.setOnClickListener(this);
             this.mItemListener = bookClickListener;
         }
 
@@ -83,6 +87,14 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             tvTag02.setText(book.getTags().get(1).getNameTag());
             tvTag03.setText(book.getTags().get(2).getNameTag());
             Glide.with(itemView).load(book.getUrl()).into(ivBook);
+
+            if (BuildConfig.FLAVOR.equals("pago")) {
+                tvSimbol.setVisibility(View.INVISIBLE);
+                tvPrice.setVisibility(View.INVISIBLE);
+            } else {
+                tvSimbol.setVisibility(View.VISIBLE);
+                tvPrice.setVisibility(View.VISIBLE);
+            }
         }
 
         @Override

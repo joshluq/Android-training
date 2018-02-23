@@ -2,7 +2,9 @@ package com.example.adiosesr.androidtraining.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Tag {
+import java.io.Serializable;
+
+public class Tag implements Serializable {
     @SerializedName("id")
     private Long idTag;
     @SerializedName("name")

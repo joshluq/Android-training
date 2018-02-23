@@ -27,16 +27,13 @@ public class Book implements Serializable {
     @SerializedName("idioma")
     private String countryEd;
     @SerializedName("editor")
-    private String numEdition;
+    private String editor;
     @SerializedName("price")
     private Double price;
     @SerializedName("url")
     private String url;
     @SerializedName("banner")
     private String banner;
-
-    public Book() {
-    }
 
     public Integer getId() {
         return id;
@@ -111,12 +108,12 @@ public class Book implements Serializable {
         this.countryEd = countryEd;
     }
 
-    public String getNumEdition() {
-        return numEdition;
+    public String getEditor() {
+        return editor;
     }
 
-    public void setNumEdition(String numEdition) {
-        this.numEdition = numEdition;
+    public void setEditor(String editor) {
+        this.editor = editor;
     }
 
     public Double getPrice() {

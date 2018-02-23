@@ -20,4 +20,14 @@
     <string name="tag3">Similares</string>
     <string name="tag4">Drama</string>
     <string name="labelSoles">S/.</string>
+    <string name="textDate">21/02/2018</string>
+    <string name="numberPages">180</string>
+    <string name="labelDate">Fecha de publicación:\n %s</string>
+    <string name="labelPage">%d Páginas</string>
+    <string name="dataAuthor">Datos de Autor</string>
+    <string name="labelFistName">Nombre: %s</string>
+    <string name="labelLastName">Apellido: %s</string>
+    <string name="language">Idioma</string>
+    <string name="editor">Editor</string>
+    <string name="isbn">ISBN: </string>
 </resources>

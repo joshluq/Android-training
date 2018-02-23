@@ -1,5 +1,6 @@
 package com.example.adiosesr.androidtraining;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
@@ -9,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.adiosesr.androidtraining.adapter.BookAdapter;
 import com.example.adiosesr.androidtraining.adapter.BookClickListener;
@@ -16,6 +18,7 @@ import com.example.adiosesr.androidtraining.models.Book;
 import com.example.adiosesr.androidtraining.network.BookResponse;
 import com.example.adiosesr.androidtraining.network.Service;
 import com.example.adiosesr.androidtraining.util.ApiUtil;
+import com.example.adiosesr.androidtraining.util.Extras;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,16 +41,24 @@ public class BookListFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(final View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
-
 
         mService = ApiUtil.getService();
         mAdapater = new BookAdapter(new BookClickListener() {
             @Override
-            public void onClick(Book name) {
-                //Empty
+            public void onClick(Book book) {
+                if(BuildConfig.FLAVOR.equals("gratis"))
+                {
+                    Toast.makeText(getActivity(),"Por favor Comprar el App", Toast.LENGTH_LONG).show();
+                    Log.d(LOGTAG,"Seleccionado");
+                }
+                else {
+                    Intent intent = new Intent(getActivity(),StoreActivity.class);
+                    intent.putExtra(Extras.EXTRAS_BOOKS.getExtra(),book);
+                    startActivity(intent);
+                }
             }
         });
         RecyclerView.LayoutManager layout = new LinearLayoutManager(this.getContext());
@@ -68,7 +79,6 @@ public class BookListFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_book_list, container, false);
     }
 
-    @SuppressWarnings("unchecked cast")
     private void fillList() {
         mService.getBooks().enqueue(new Callback<BookResponse>() {
             @Override
@@ -86,6 +96,5 @@ public class BookListFragment extends Fragment {
                 Log.d(LOGTAG, "Error loading");
             }
         });
-
     }
 }
