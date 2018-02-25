@@ -8,4 +8,130 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TextFree">
+        <item name="android:text">@string/textFlavor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/dimenTwentysp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextPay">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/dimen_textview</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:text">@string/textFlavor</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:background">@drawable/button_corner</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dimenTwentydp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:text">@string/buttonFlavor</item>
+    </style>
+
+    <style name="ButtonSkip">
+        <item name="android:background">@color/colorTransparent</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/dimenSixteensp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextLabelIsbn">
+        <item name="android:text">@string/isbn</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextIsbn">
+        <item name="android:textSize">@dimen/dimenTensp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextNameBook">}
+        <item name="android:text">@string/nameBook</item>
+    </style>
+
+    <style name="TextDetailBook">
+        <item name="android:text">@string/detailBook</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="View">
+        <item name="android:background">@color/colorGray</item>
+    </style>
+
+    <style name="TextIntroductionBook">
+        <item name="android:gravity">left</item>
+        <item name="android:text">@string/introductionBook</item>
+        <item name="android:textSize">@dimen/sizeIntroduction</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextLabelAuthor">
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/dataAuthor</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/dimenTwentysp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextFirstName">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/dimenSixteensp</item>
+    </style>
+
+    <style name="TextLastName">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/dimenSixteensp</item>
+    </style>
+
+    <style name="TextQualify">
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/qualifyBook</item>
+        <item name="android:textSize">@dimen/sizeCalificate</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextReviewPublic">
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/reviewPublic</item>
+    </style>
+
+    <style name="TextLanguage">
+        <item name="android:text">@string/language</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/dimenSixteensp</item>
+    </style>
+
+    <style name="TextEditor">
+        <item name="android:text">@string/editor</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/dimenSixteensp</item>
+        <item name="android:textStyle">bold|italic</item>
+    </style>
+
+    <style name="Image">
+        <item name="android:src">@mipmap/ic_launcher_round</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+
+    <style name="RatingBar">
+        <item name="colorControlNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+    </style>
+    
+    <style name="ButtonSelectableL">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dimenFourteensp</item>
+        <item name="android:background">@drawable/button_selector_l</item>
+        <item name="android:textColor">@color/selector_button_text</item>
+
+    </style>
+    <style name="ButtonSelectableR">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dimenFourteensp</item>
+        <item name="android:background">@drawable/button_selector_r</item>
+        <item name="android:textColor">@color/selector_button_text</item>
+    </style>
+    
 </resources>

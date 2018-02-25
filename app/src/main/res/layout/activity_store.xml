@@ -23,6 +23,7 @@
             tools:ignore="ContentDescription" />
 
         <ImageView
+            style="@style/Image"
             android:id="@+id/ivFront"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="@dimen/hundredFifty"
@@ -34,28 +35,25 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivBanner"
-            app:srcCompat="@mipmap/ic_launcher_round"
             tools:ignore="ContentDescription" />
 
         <TextView
             android:id="@+id/tvTitleIsbn"
+            style="@style/TextLabelIsbn"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenEightdp"
             android:layout_marginStart="@dimen/dimenEightdp"
             android:layout_marginTop="@dimen/dimenEightdp"
-            android:text="@string/isbn"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/ivFront"
             app:layout_constraintStart_toStartOf="@+id/ivFront"
             app:layout_constraintTop_toBottomOf="@+id/ivFront" />
 
         <TextView
             android:id="@+id/tvIsbn"
+            style="@style/TextIsbn"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/dimenTensp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/tvTitleIsbn"
             app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="@+id/tvTitleIsbn"
@@ -64,12 +62,12 @@
 
         <TextView
             android:id="@+id/tvNameBook"
+            style="@style/TextNameBook"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenEightdp"
             android:layout_marginStart="@dimen/dimenEightdp"
             android:layout_marginTop="@dimen/dimenSixteendp"
-            android:text="@string/nameBook"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             app:layout_constraintEnd_toStartOf="@+id/tvEditor"
             app:layout_constraintStart_toEndOf="@+id/ivFront"
@@ -77,13 +75,12 @@
 
         <TextView
             android:id="@+id/tvDetailBook"
+            style="@style/TextDetailBook"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenEightdp"
             android:layout_marginStart="@dimen/dimenEightdp"
             android:layout_marginTop="@dimen/dimenThreedp"
-            android:text="@string/detailBook"
-            android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="@+id/tvNameBook"
             app:layout_constraintStart_toEndOf="@+id/ivFront"
             app:layout_constraintTop_toBottomOf="@+id/tvNameBook" />
@@ -93,64 +90,61 @@
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimenFourdp"
-            android:text="@string/numberPages"
             app:layout_constraintEnd_toEndOf="@+id/tvDetailBook"
             app:layout_constraintStart_toStartOf="@+id/tvDetailBook"
-            app:layout_constraintTop_toBottomOf="@+id/tvDetailBook" />
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailBook"
+            tools:text="@string/numberPages" />
 
         <View
             android:id="@+id/viewFirst"
+            style="@style/View"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="@dimen/dimenTendp"
             android:layout_marginEnd="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenSixteendp"
             android:layout_marginTop="@dimen/dimenTwentydp"
-            android:background="@color/colorGray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvPage" />
 
         <ImageButton
+            style="@style/Image"
             android:id="@+id/ibTag01"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenEightdp"
             android:layout_marginStart="@dimen/dimenEightdp"
             android:layout_marginTop="@dimen/dimenSixteendp"
-            android:background="@color/colorWhite"
             app:layout_constraintEnd_toStartOf="@+id/ibTag02"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/viewFirst"
-            app:srcCompat="@mipmap/ic_launcher_round"
             tools:ignore="ContentDescription" />
 
         <ImageButton
+            style="@style/Image"
             android:id="@+id/ibTag02"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenEightdp"
             android:layout_marginStart="@dimen/dimenEightdp"
-            android:background="@color/colorWhite"
             app:layout_constraintEnd_toStartOf="@+id/ibTag03"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ibTag01"
             app:layout_constraintTop_toTopOf="@+id/ibTag01"
-            app:srcCompat="@mipmap/ic_launcher_round"
             tools:ignore="ContentDescription" />
 
         <ImageButton
+            style="@style/Image"
             android:id="@+id/ibTag03"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenEightdp"
             android:layout_marginStart="@dimen/dimenEightdp"
-            android:background="@color/colorWhite"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/ibTag02"
             app:layout_constraintTop_toTopOf="@+id/ibTag02"
-            app:srcCompat="@mipmap/ic_launcher_round"
             tools:ignore="ContentDescription" />
 
         <TextView
@@ -161,11 +155,11 @@
             android:layout_marginStart="@dimen/dimenEightdp"
             android:layout_marginTop="@dimen/dimenFourdp"
             android:gravity="center"
-            android:text="@string/tag1"
             app:layout_constraintEnd_toEndOf="@+id/ibTag01"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="@+id/ibTag01"
-            app:layout_constraintTop_toBottomOf="@+id/ibTag01" />
+            app:layout_constraintTop_toBottomOf="@+id/ibTag01"
+            tools:text="@string/tag1" />
 
         <TextView
             android:id="@+id/tvTag02"
@@ -175,10 +169,10 @@
             android:layout_marginStart="@dimen/dimenEightdp"
             android:layout_marginTop="@dimen/dimenFourdp"
             android:gravity="center"
-            android:text="@string/tag2"
             app:layout_constraintEnd_toEndOf="@+id/ibTag02"
             app:layout_constraintStart_toStartOf="@+id/ibTag02"
-            app:layout_constraintTop_toBottomOf="@+id/ibTag02" />
+            app:layout_constraintTop_toBottomOf="@+id/ibTag02"
+            tools:text="@string/tag2" />
 
         <TextView
             android:id="@+id/tvTag03"
@@ -188,34 +182,31 @@
             android:layout_marginStart="@dimen/dimenEightdp"
             android:layout_marginTop="@dimen/dimenFourdp"
             android:gravity="center"
-            android:text="@string/tag3"
             app:layout_constraintEnd_toEndOf="@+id/ibTag03"
             app:layout_constraintStart_toStartOf="@+id/ibTag03"
-            app:layout_constraintTop_toBottomOf="@+id/ibTag03" />
+            app:layout_constraintTop_toBottomOf="@+id/ibTag03"
+            tools:text="@string/tag3" />
 
         <View
             android:id="@+id/viewTwo"
+            style="@style/View"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="@dimen/dimenTendp"
             android:layout_marginEnd="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenSixteendp"
             android:layout_marginTop="@dimen/dimenSixteendp"
-            android:background="@color/colorGray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvTag02" />
 
         <TextView
             android:id="@+id/tvIntroductionBook"
+            style="@style/TextIntroductionBook"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenThirtyTwodp"
             android:layout_marginStart="@dimen/dimenThirtyTwodp"
             android:layout_marginTop="@dimen/dimenSixteendp"
-            android:gravity="left"
-            android:text="@string/introductionBook"
-            android:textSize="@dimen/sizeIntroduction"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewTwo"
@@ -223,37 +214,32 @@
 
         <View
             android:id="@+id/viewThre"
+            style="@style/View"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="@dimen/dimenTendp"
             android:layout_marginEnd="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenSixteendp"
             android:layout_marginTop="@dimen/dimenSixteendp"
-            android:background="@color/colorGray"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvIntroductionBook" />
 
         <TextView
             android:id="@+id/labelAuthor"
+            style="@style/TextLabelAuthor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimenSixteendp"
-            android:gravity="center"
-            android:text="@string/dataAuthor"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/dimenTwentysp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewThre" />
 
         <TextView
             android:id="@+id/tvFirstName"
+            style="@style/TextFirstName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimenFourdp"
-            android:gravity="center"
-            android:textSize="@dimen/dimenSixteensp"
             app:layout_constraintEnd_toEndOf="@+id/labelAuthor"
             app:layout_constraintStart_toStartOf="@+id/labelAuthor"
             app:layout_constraintTop_toBottomOf="@+id/labelAuthor"
@@ -261,10 +247,9 @@
 
         <TextView
             android:id="@+id/tvLastName"
+            style="@style/TextLastName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="@+id/tvFirstName"
             app:layout_constraintStart_toStartOf="@+id/tvFirstName"
             app:layout_constraintTop_toBottomOf="@+id/tvFirstName"
@@ -272,24 +257,24 @@
 
         <View
             android:id="@+id/viewFour"
+            style="@style/View"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="9dp"
             android:layout_marginEnd="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenSixteendp"
             android:layout_marginTop="@dimen/dimenSixteendp"
-            android:background="@color/colorGray"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLastName" />
 
         <ImageView
+            style="@style/Image"
             android:id="@+id/ivUser"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/HundredNinety"
             android:layout_marginStart="@dimen/HundredNinety"
             android:layout_marginTop="8dp"
-            android:src="@mipmap/ic_launcher_round"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.402"
             app:layout_constraintStart_toStartOf="parent"
@@ -298,20 +283,18 @@
 
         <TextView
             android:id="@+id/tvQualfy"
+            style="@style/TextQualify"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/hundredTendp"
             android:layout_marginStart="@dimen/hundredTendp"
             android:layout_marginTop="@dimen/dimenEightdp"
-            android:gravity="center"
-            android:text="@string/qualifyBook"
-            android:textSize="@dimen/sizeCalificate"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivUser" />
 
         <RatingBar
+            android:theme="@style/RatingBar"
             android:id="@+id/Ratin01"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
@@ -320,9 +303,10 @@
             android:layout_marginTop="@dimen/dimenSixteendp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvQualfy" />
+            app:layout_constraintTop_toBottomOf="@+id/tvQualfy"/>
 
         <TextView
+            style="@style/TextReviewPublic"
             android:id="@+id/tvReviewPulic"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
@@ -330,8 +314,6 @@
             android:layout_marginEnd="@dimen/dimeSixtydp"
             android:layout_marginStart="@dimen/dimeSixtydp"
             android:layout_marginTop="@dimen/dimenSixteendp"
-            android:gravity="center"
-            android:text="@string/reviewPublic"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -339,27 +321,41 @@
             app:layout_constraintVertical_bias="0.773" />
 
         <TextView
+            style="@style/TextLanguage"
             android:id="@+id/tvLanguage"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
-            android:text="@string/language"
-            android:textColor="@color/colorPrimaryDark"
-            android:textSize="@dimen/dimenSixteensp"
             app:layout_constraintEnd_toEndOf="@+id/tvEditor"
             app:layout_constraintStart_toStartOf="@+id/tvEditor"
             app:layout_constraintTop_toTopOf="@+id/tvNameBook" />
 
         <TextView
+            style="@style/TextEditor"
             android:id="@+id/tvEditor"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimenEightdp"
-            android:text="@string/editor"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/dimenSixteensp"
-            android:textStyle="bold|italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvLanguage" />
+
+        <Button
+            style="@style/ButtonSelectableL"
+            android:text="Leer ahora"
+            android:id="@+id/buttonSelector"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSelector2"
+            app:layout_constraintEnd_toStartOf="@+id/buttonSelector2"
+            app:layout_constraintTop_toTopOf="@+id/buttonSelector2" />
+
+        <Button
+            android:id="@+id/buttonSelector2"
+            style="@style/ButtonSelectableR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Despúes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivBanner" />
 
     </android.support.constraint.ConstraintLayout>
 

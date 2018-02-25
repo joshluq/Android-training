@@ -8,16 +8,12 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
+        style="@style/TextPay"
         android:id="@+id/textView"
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/textFlavor"
-        android:textSize="@dimen/dimen_textview"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </android.support.constraint.ConstraintLayout>

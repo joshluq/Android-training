@@ -12,9 +12,6 @@
         android:layout_marginEnd="@dimen/dimenSixteendp"
         android:layout_marginStart="@dimen/dimenEightdp"
         android:layout_marginTop="@dimen/dimenEightdp"
-        android:gravity="center"
-        android:textSize="@dimen/sizeTitleList"
-        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/tvSimbol"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -72,7 +69,7 @@
         tools:text="@tools:sample/last_names" />
 
     <ImageView
-        android:src="@mipmap/ic_launcher_round"
+        style="@style/Image"
         android:id="@+id/ivBook"
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"

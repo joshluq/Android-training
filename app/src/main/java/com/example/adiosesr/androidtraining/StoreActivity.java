@@ -2,7 +2,9 @@ package com.example.adiosesr.androidtraining;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -12,6 +14,7 @@ import com.example.adiosesr.androidtraining.util.Extras;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class StoreActivity extends AppCompatActivity {
     @BindView(R.id.ivBanner)
@@ -42,6 +45,13 @@ public class StoreActivity extends AppCompatActivity {
     TextView tvEditor;
     @BindView(R.id.tvIsbn)
     TextView tvIsbn;
+    @BindView(R.id.Ratin01)
+    RatingBar ratin01;
+    @BindView(R.id.buttonSelector)
+    Button btnSelector01;
+    @BindView(R.id.buttonSelector2)
+    Button btnSelector02;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +59,37 @@ public class StoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_store);
         ButterKnife.bind(this);
         book();
+        ratin01.setRating(5);
     }
+
+    @OnClick(R.id.buttonSelector)
+    public void buttonSelector() {
+        unSelectedButton();
+        selectButton(btnSelector01);
+    }
+
+    @OnClick(R.id.buttonSelector2)
+    public void buttonSelector02() {
+        unSelectedButton();
+        selectButton(btnSelector02);
+    }
+
+    public void unSelectedButton() {
+        btnSelector01.setSelected(false);
+        btnSelector02.setSelected(false);
+    }
+
+    public void selectButton(Button button) {
+        button.setSelected(true);
+    }
+
     public void book() {
 
         Book b = (Book) getIntent().getSerializableExtra(Extras.EXTRAS_BOOKS.getExtra());
         Glide.with(this).load(b.getBanner()).into(ivBanner);
         Glide.with(this).load(b.getUrl()).into(ivFront);
         tvNameBook.setText(b.getName());
-        tvDescBook.setText(String.format(getString(R.string.labelDate),b.getPubliDate()));
+        tvDescBook.setText(String.format(getString(R.string.labelDate), b.getPubliDate()));
         tvLanguage.setText(b.getCountryEd());
         tvEditor.setText(b.getEditor());
         tvPages.setText(String.format(getString(R.string.labelPage), b.getPages()));
