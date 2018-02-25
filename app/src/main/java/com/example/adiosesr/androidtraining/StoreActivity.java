@@ -52,7 +52,6 @@ public class StoreActivity extends AppCompatActivity {
     @BindView(R.id.buttonSelector2)
     Button btnSelector02;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

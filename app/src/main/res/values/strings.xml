@@ -30,4 +30,6 @@
     <string name="language">Idioma</string>
     <string name="editor">Editor</string>
     <string name="isbn">ISBN: </string>
+    <string name="btnSelector01">Leer ahora</string>
+    <string name="btnSelector02">Leer Después</string>
 </resources>

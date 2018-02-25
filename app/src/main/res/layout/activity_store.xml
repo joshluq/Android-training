@@ -259,7 +259,7 @@
             android:id="@+id/viewFour"
             style="@style/View"
             android:layout_width="@dimen/dimenWidth"
-            android:layout_height="9dp"
+            android:layout_height="@dimen/dimenTendp"
             android:layout_marginEnd="@dimen/dimenSixteendp"
             android:layout_marginStart="@dimen/dimenSixteendp"
             android:layout_marginTop="@dimen/dimenSixteendp"
@@ -274,7 +274,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/HundredNinety"
             android:layout_marginStart="@dimen/HundredNinety"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dimenEightdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.402"
             app:layout_constraintStart_toStartOf="parent"
@@ -340,9 +340,9 @@
 
         <Button
             style="@style/ButtonSelectableL"
-            android:text="Leer ahora"
+            android:text="@string/btnSelector01"
             android:id="@+id/buttonSelector"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="@+id/buttonSelector2"
             app:layout_constraintEnd_toStartOf="@+id/buttonSelector2"
@@ -351,9 +351,9 @@
         <Button
             android:id="@+id/buttonSelector2"
             style="@style/ButtonSelectableR"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
-            android:text="Despúes"
+            android:text="@string/btnSelector02"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/ivBanner" />
 
