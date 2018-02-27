@@ -2,6 +2,7 @@ package com.example.adiosesr.androidtraining;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
@@ -41,7 +42,7 @@ public class BookListFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(final View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
 
@@ -74,7 +75,7 @@ public class BookListFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_book_list, container, false);
     }
@@ -82,7 +83,7 @@ public class BookListFragment extends Fragment {
     private void fillList() {
         mService.getBooks().enqueue(new Callback<BookResponse>() {
             @Override
-            public void onResponse(Call<BookResponse> call, Response<BookResponse> response) {
+            public void onResponse(@NonNull Call<BookResponse> call, @NonNull Response<BookResponse> response) {
                 if (response.isSuccessful()) {
                     mAdapater.updateBooks(response.body().getBody().getBooks());
                     Log.d(LOGTAG, "Loaded ");
@@ -92,7 +93,7 @@ public class BookListFragment extends Fragment {
             }
 
             @Override
-            public void onFailure(Call<BookResponse> call, Throwable t) {
+            public void onFailure(@NonNull Call<BookResponse> call, @NonNull Throwable t) {
                 Log.d(LOGTAG, "Error loading");
             }
         });

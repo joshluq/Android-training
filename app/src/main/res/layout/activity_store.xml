@@ -11,6 +11,19 @@
         android:layout_height="wrap_content"
         tools:context="com.example.adiosesr.androidtraining.StoreActivity">
 
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tbToolbar"
+            style="@style/tbToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="@dimen/dimenFourdp"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            tools:ignore="UnusedAttribute" />
+
         <ImageView
             android:id="@+id/ivBanner"
             android:layout_width="@dimen/dimenWidth"
@@ -18,7 +31,7 @@
             android:scaleType="fitXY"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tbToolbar"
             app:srcCompat="@mipmap/ic_launcher_round"
             tools:ignore="ContentDescription" />
 
@@ -296,7 +309,7 @@
         <RatingBar
             android:theme="@style/RatingBar"
             android:id="@+id/Ratin01"
-            android:layout_width="@dimen/dimenWidth"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/Eightydp"
             android:layout_marginStart="@dimen/Eightydp"
@@ -305,20 +318,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvQualfy"/>
 
-        <TextView
-            style="@style/TextReviewPublic"
-            android:id="@+id/tvReviewPulic"
-            android:layout_width="@dimen/dimenWidth"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dimenSixteendp"
-            android:layout_marginEnd="@dimen/dimeSixtydp"
-            android:layout_marginStart="@dimen/dimeSixtydp"
-            android:layout_marginTop="@dimen/dimenSixteendp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Ratin01"
-            app:layout_constraintVertical_bias="0.773" />
 
         <TextView
             style="@style/TextLanguage"
@@ -339,11 +338,11 @@
             app:layout_constraintTop_toBottomOf="@+id/tvLanguage" />
 
         <Button
-            style="@style/ButtonSelectableL"
-            android:text="@string/btnSelector01"
             android:id="@+id/buttonSelector"
+            style="@style/ButtonSelectableL"
             android:layout_width="@dimen/dimenWidth"
             android:layout_height="wrap_content"
+            android:text="@string/btnSelector01"
             app:layout_constraintBottom_toBottomOf="@+id/buttonSelector2"
             app:layout_constraintEnd_toStartOf="@+id/buttonSelector2"
             app:layout_constraintTop_toTopOf="@+id/buttonSelector2" />
@@ -356,6 +355,33 @@
             android:text="@string/btnSelector02"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/ivBanner" />
+
+        <Button
+            style="@style/ButtonComentary"
+            android:id="@+id/btnCommentary"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenEightdp"
+            android:layout_marginStart="@dimen/dimenEightdp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            android:text="@string/btnComment"
+            app:layout_constraintEnd_toEndOf="@+id/Ratin01"
+            app:layout_constraintStart_toStartOf="@+id/Ratin01"
+            app:layout_constraintTop_toBottomOf="@+id/Ratin01" />
+
+        <TextView
+            android:id="@+id/tvReviewPulic"
+            style="@style/TextReviewPublic"
+            android:layout_width="@dimen/dimenWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimenSixteendp"
+            android:layout_marginEnd="@dimen/dimeSixtydp"
+            android:layout_marginStart="@dimen/dimeSixtydp"
+            android:layout_marginTop="@dimen/dimenSixteendp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCommentary" />
 
     </android.support.constraint.ConstraintLayout>
 

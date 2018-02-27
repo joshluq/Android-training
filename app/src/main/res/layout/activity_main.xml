@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="@dimen/sizeLayout"
     tools:context="com.example.adiosesr.androidtraining.MainActivity">
+
 
     <FrameLayout
         android:id="@+id/fragmentBook"

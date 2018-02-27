@@ -7,12 +7,14 @@
 
     <TextView
         android:id="@+id/tvTitleBook"
+        style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dimenSixteendp"
+        android:layout_marginEnd="@dimen/dimenEightdp"
         android:layout_marginStart="@dimen/dimenEightdp"
         android:layout_marginTop="@dimen/dimenEightdp"
-        app:layout_constraintEnd_toStartOf="@+id/tvSimbol"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/ivBook"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@tools:sample/full_names" />
@@ -22,12 +24,14 @@
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
         android:text="@string/labelSoles"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/ivBook"
         app:layout_constraintTop_toTopOf="@+id/tvTitleBook" />
 
     <TextView
         android:id="@+id/tvPrice"
         android:layout_width="@dimen/dimenWidth"
+        android:textStyle="bold"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@+id/tvSimbol"
         app:layout_constraintTop_toTopOf="@+id/tvSimbol"
@@ -38,6 +42,7 @@
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dimenEightdp"
+        android:layout_marginStart="@dimen/dimenFourdp"
         android:layout_marginTop="@dimen/dimenSixteendp"
         app:layout_constraintEnd_toEndOf="@+id/tvTag03"
         app:layout_constraintEnd_toStartOf="@+id/tvTag02"
@@ -60,6 +65,7 @@
         android:id="@+id/tvTag03"
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimenFourdp"
         android:layout_marginStart="@dimen/dimenEightdp"
         app:layout_constraintEnd_toEndOf="@+id/tvTitleBook"
         app:layout_constraintEnd_toStartOf="@+id/ivBook"

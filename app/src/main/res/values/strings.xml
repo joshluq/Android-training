@@ -32,4 +32,8 @@
     <string name="isbn">ISBN: </string>
     <string name="btnSelector01">Leer ahora</string>
     <string name="btnSelector02">Leer Después</string>
+    <string name="back">Back</string>
+    <string name="btnComment">Deja tu Comentario</string>
+    <string name="CommentaryOk">Salir</string>
+    <string name="Titlecommentary">Déjanos tu Comentario</string>
 </resources>
