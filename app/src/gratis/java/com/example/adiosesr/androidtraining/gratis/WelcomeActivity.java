@@ -23,11 +23,6 @@ public class WelcomeActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.btnBuy)
-    public void buy() {
-
-    }
-
     @OnClick(R.id.btnSkip)
     public void skip() {
         Intent intent = new Intent(this, MainActivity.class);

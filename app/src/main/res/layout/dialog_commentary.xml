@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivCommentary"
+        android:layout_width="@dimen/dimenWidth"
+        android:layout_height="@dimen/hundredFifty"
+        android:layout_marginEnd="@dimen/dimenEightdp"
+        android:layout_marginStart="@dimen/dimenEightdp"
+        android:layout_marginTop="@dimen/dimenEightdp"
+        android:background="@color/colorPrimary"
+        android:src="@mipmap/commentary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tvTitleCommentary"
+        android:layout_width="@dimen/dimenWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimenEightdp"
+        android:layout_marginStart="@dimen/dimenEightdp"
+        android:layout_marginTop="@dimen/dimenEightdp"
+        android:text="@string/Titlecommentary"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ivCommentary"
+        app:layout_constraintTop_toBottomOf="@+id/ivCommentary" />
+
+    <Button
+        android:id="@+id/btnComentaryOk"
+        style="@style/ButtonComentary"
+        android:layout_width="@dimen/dimenWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimenEightdp"
+        android:layout_marginEnd="@dimen/dimenEightdp"
+        android:layout_marginStart="@dimen/dimenEightdp"
+        android:layout_marginTop="@dimen/dimenEightdp"
+        android:text="@string/CommentaryOk"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/etCommentary"
+        app:layout_constraintStart_toStartOf="@+id/etCommentary"
+        app:layout_constraintTop_toBottomOf="@+id/etCommentary" />
+
+    <EditText
+        android:id="@+id/etCommentary"
+        android:layout_width="@dimen/dimenWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimenEightdp"
+        android:layout_marginStart="@dimen/dimenEightdp"
+        android:layout_marginTop="@dimen/dimenEightdp"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitleCommentary"
+        app:layout_constraintStart_toStartOf="@+id/tvTitleCommentary"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleCommentary" />
+</android.support.constraint.ConstraintLayout>

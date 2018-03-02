@@ -22,6 +22,7 @@
     <dimen name="dimenTensp">10sp</dimen>
     <dimen name="sizeCalificate">18sp</dimen>
     <dimen name="dimenFifteendp">15sp</dimen>
+    <dimen name="dimenFourteensp">14sp</dimen>
     <dimen name="Eightydp">80dp</dimen>
     <dimen name="HundredThirtydp">130dp</dimen>
     <dimen name="sizeIntroduction">20sp</dimen>
@@ -33,4 +34,5 @@
     <dimen name="dimenWidth">0dp</dimen>
     <dimen name="dimeSixtydp">60dp</dimen>
     <dimen name="dimenFourtydp">40dp</dimen>
+    <dimen name="dimen_textview">36sp</dimen>
 </resources>

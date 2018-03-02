@@ -9,43 +9,36 @@
     tools:context="com.example.adiosesr.androidtraining.gratis.WelcomeActivity">
 
     <TextView
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="@dimen/dimenTwentydp"
+        style="@style/TextFree"
         android:id="@+id/tvText"
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimenThirtyTwodp"
-        android:text="@string/textFlavor"
+        android:layout_marginTop="@dimen/Eightydp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnBuy"
+        style="@style/ButtonStyle"
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dimenEightdp"
         android:layout_marginStart="@dimen/dimenEightdp"
-        android:layout_marginTop="@dimen/dimenFourtydp"
-        android:background="@color/colorPrimary"
-        android:text="@string/buttonFlavor"
-        android:textSize="@dimen/sizeBtnBuy"
-        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dimenFifty"
         app:layout_constraintEnd_toEndOf="@+id/tvText"
         app:layout_constraintStart_toStartOf="@+id/tvText"
         app:layout_constraintTop_toBottomOf="@+id/tvText" />
 
     <Button
-        android:textColor="@color/colorPrimary"
-        android:background="@color/colorWhite"
+        android:text="@string/buttonSkip"
+        style="@style/ButtonSkip"
         android:id="@+id/btnSkip"
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/dimenTwodp"
         android:layout_marginTop="@dimen/dimenEightdp"
-        android:text="@string/buttonSkip"
         app:layout_constraintEnd_toEndOf="@+id/btnBuy"
-        app:layout_constraintTop_toBottomOf="@+id/btnBuy" />
+        app:layout_constraintTop_toBottomOf="@+id/btnBuy"/>
 
 </android.support.constraint.ConstraintLayout>

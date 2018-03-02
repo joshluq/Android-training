@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.github.gfx.ribbonizer'
 
 android {
     compileSdkVersion 27
@@ -47,4 +48,20 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     implementation 'com.github.bumptech.glide:glide:4.6.1'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
+}
+ribbonizer {
+    builder{ variant,iconFile ->
+        if(variant.flavorName=="gratis")
+        {
+            def filter  = customColorRibbonFilter(variant,iconFile,"#E65100")
+            filter.label="GRATIS"
+            return filter
+        }
+        else if(variant.flavorName=="pago")
+        {
+            def filter  = customColorRibbonFilter(variant,iconFile,"#1A237E")
+            filter.label="PAGO"
+            return filter
+        }
+    }
 }
