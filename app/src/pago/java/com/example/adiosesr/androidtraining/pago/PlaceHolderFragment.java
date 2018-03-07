@@ -28,9 +28,9 @@ public class PlaceHolderFragment extends Fragment {
     TextView pagerDescription;
 
     int[] imageBack = new int[]{
-            R.drawable.book,
-            R.drawable.online_booking,
-            R.drawable.get_started
+            R.drawable.imgpager01,
+            R.drawable.imgpager02,
+            R.drawable.imgpager03
     };
 
     public PlaceHolderFragment() {
@@ -56,15 +56,10 @@ public class PlaceHolderFragment extends Fragment {
 
         tvSectionLabel.setText(getString(R.string.section_format, position));
 
-        if (position == 1) {
-            pagerDescription.setText(R.string.descPag01);
-        } else {
-            if (position == 2) {
-                pagerDescription.setText(R.string.descPag02);
-            } else {
-                pagerDescription.setText(R.string.descPag03);
-            }
-        }
+        if (position == 1) pagerDescription.setText(R.string.descPag01);
+        else if (position == 2) pagerDescription.setText(R.string.descPag02);
+        else pagerDescription.setText(R.string.descPag03);
+
         Glide.with(this).load(imageBack[getArguments().getInt(Extras.EXTRAS_SECTION_NUMBER.getExtra())]).into(ivSectionImage);
 
         return view;

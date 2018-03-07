@@ -2,7 +2,6 @@ package com.example.adiosesr.androidtraining.gratis;
 
 import android.animation.ArgbEvaluator;
 import android.content.Intent;
-//import android.support.design.widget.CoordinatorLayout;
 
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -83,18 +82,11 @@ public class WelcomeActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 page = position;
                 updateIndicators(page);
-                if (page == 0) {
-                    container.setBackgroundColor(color1);
 
-                } else {
-                    if (page == 1) {
-                        container.setBackgroundColor(color2);
+                if (page == 0) container.setBackgroundColor(color1);
+                else if (page == 1) container.setBackgroundColor(color2);
+                else container.setBackgroundColor(color3);
 
-                    } else if (page == 2) {
-                        container.setBackgroundColor(color3);
-
-                    }
-                }
                 ibtnNext.setVisibility(position == 2 ? View.GONE : View.VISIBLE);
                 btnEnd.setVisibility(View.GONE);
                 btnSkiPager.setVisibility(position == 2 ? View.VISIBLE : View.GONE);
@@ -103,7 +95,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
             @Override
             public void onPageScrollStateChanged(int state) {
-
+                //Empty Method
             }
         });
     }
