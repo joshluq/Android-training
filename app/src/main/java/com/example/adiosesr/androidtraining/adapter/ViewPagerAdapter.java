@@ -1,10 +1,11 @@
-package com.example.adiosesr.androidtraining.pago.adapter;
+package com.example.adiosesr.androidtraining.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.adiosesr.androidtraining.pago.PlaceHolderFragment;
+import com.example.adiosesr.androidtraining.PlaceHolderFragment;
+
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
     public ViewPagerAdapter(FragmentManager fm) {

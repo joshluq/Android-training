@@ -14,7 +14,7 @@ import android.widget.ImageView;
 
 import com.example.adiosesr.androidtraining.MainActivity;
 import com.example.adiosesr.androidtraining.R;
-import com.example.adiosesr.androidtraining.gratis.adapter.ViewPagerAdapter;
+import com.example.adiosesr.androidtraining.adapter.ViewPagerAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -87,10 +87,18 @@ public class WelcomeActivity extends AppCompatActivity {
                 else if (page == 1) container.setBackgroundColor(color2);
                 else container.setBackgroundColor(color3);
 
+                if (position == 2) {
+                    btnEnd.setVisibility(View.VISIBLE);
+                    btnEnd.setText(R.string.buttonFlavor);
+
+                } else {
+                    btnEnd.setVisibility(View.GONE);
+
+                }
                 ibtnNext.setVisibility(position == 2 ? View.GONE : View.VISIBLE);
-                btnEnd.setVisibility(View.GONE);
                 btnSkiPager.setVisibility(position == 2 ? View.VISIBLE : View.GONE);
                 ibtnBack.setVisibility(position == 0 || position == 2 ? View.GONE : View.VISIBLE);
+
             }
 
             @Override

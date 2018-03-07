@@ -15,17 +15,6 @@
         app:layout_constraintTop_toBottomOf="@+id/PagerDescription"
         tools:src="@drawable/imgpager03" />
 
-    <Button
-        android:id="@+id/btnBuyPager"
-        style="@style/ButtonStyle"
-        android:layout_width="@dimen/dimenWidth"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dimenSixteendp"
-        android:layout_marginTop="@dimen/dimenEightdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/section_img"
-        />
-
     <TextView
         android:gravity="center"
         android:id="@+id/section_label"

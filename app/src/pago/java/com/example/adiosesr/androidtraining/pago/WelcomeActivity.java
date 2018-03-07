@@ -13,15 +13,13 @@ import android.widget.ImageView;
 
 import com.example.adiosesr.androidtraining.MainActivity;
 import com.example.adiosesr.androidtraining.R;
-import com.example.adiosesr.androidtraining.pago.adapter.ViewPagerAdapter;
+import com.example.adiosesr.androidtraining.adapter.ViewPagerAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-
 public class WelcomeActivity extends AppCompatActivity {
-
 
     @BindView(R.id.ibtnNext)
     ImageButton ibtnNext;

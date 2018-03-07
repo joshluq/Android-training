@@ -1,4 +1,4 @@
-package com.example.adiosesr.androidtraining.gratis;
+package com.example.adiosesr.androidtraining;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,12 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.adiosesr.androidtraining.R;
 import com.example.adiosesr.androidtraining.util.Extras;
 
 import butterknife.BindView;
@@ -25,9 +23,6 @@ public class PlaceHolderFragment extends Fragment {
 
     @BindView(R.id.section_img)
     ImageView ivSectionImage;
-
-    @BindView(R.id.btnBuyPager)
-    Button btnBuyPager;
 
     @BindView(R.id.PagerDescription)
     TextView pagerDescription;
@@ -66,7 +61,7 @@ public class PlaceHolderFragment extends Fragment {
 
 
         Glide.with(this).load(imageBack[getArguments().getInt(Extras.EXTRAS_SECTION_NUMBER.getExtra())]).into(ivSectionImage);
-        btnBuyPager.setVisibility(position == 3 ? View.VISIBLE : View.GONE);
+
         return view;
     }
 }
