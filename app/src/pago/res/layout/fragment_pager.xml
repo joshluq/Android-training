@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/section_img"
+        android:layout_width="@dimen/dimenWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimenTwentyFour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PagerDescription"
+        tools:src="@drawable/get_started" />
+
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/section_label"
+        style="@style/TextAppearance.AppCompat.Headline"
+        android:layout_width="@dimen/dimenWidth"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimenSixteendp"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/full_names" />
+
+    <TextView
+        android:id="@+id/PagerDescription"
+        style="@style/TextPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimenSixteendp"
+        android:alpha="0.7"
+        android:gravity="center"
+        tools:text="@tools:sample/full_names"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/section_label" />
+
+
+</android.support.constraint.ConstraintLayout>

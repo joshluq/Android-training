@@ -51,7 +51,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="TextNameBook">}
+    <style name="TextNameBook">
         <item name="android:text">@string/nameBook</item>
     </style>
 
@@ -123,7 +123,7 @@
         <item name="colorControlNormal">@color/colorPrimaryDark</item>
         <item name="colorControlActivated">@color/colorPrimary</item>
     </style>
-    
+
     <style name="ButtonSelectableL">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/dimenFourteensp</item>
@@ -131,18 +131,24 @@
         <item name="android:textColor">@color/selector_button_text</item>
 
     </style>
+
     <style name="ButtonSelectableR">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/dimenFourteensp</item>
         <item name="android:background">@drawable/button_selector_r</item>
         <item name="android:textColor">@color/selector_button_text</item>
     </style>
+
     <style name="ButtonComentary">
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">@dimen/dimenFourteensp</item>
         <item name="android:background">@drawable/button_corner</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

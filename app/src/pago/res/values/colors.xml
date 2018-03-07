@@ -2,4 +2,7 @@
 <resources>
     <color name="colorPrimary">#e05a5db6</color>
     <color name="colorPrimaryDark">#e03c3e79</color>
+    <color name="colorPagerOne">#b7242ab4</color>
+    <color name="colorPagerTwo">#cef43033</color>
+    <color name="colorPagerThree">#e05a5db6</color>
 </resources>
