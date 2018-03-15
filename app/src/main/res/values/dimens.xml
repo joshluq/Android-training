@@ -35,4 +35,11 @@
     <dimen name="dimeSixtydp">60dp</dimen>
     <dimen name="dimenFourtydp">40dp</dimen>
     <dimen name="dimen_textview">36sp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="dimentwelvedp">12dp</dimen>
+    <dimen name="dimenTwentyFour">24dp</dimen>
 </resources>

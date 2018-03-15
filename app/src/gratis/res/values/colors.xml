@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#158cd1</color>
+    <color name="colorPrimary">#057CDE</color>
     <color name="colorPrimaryDark">#0d537c</color>
+    <color name="colorPagerOne">#e0355ade</color>
+    <color name="colorPagerTwo">#c547e254</color>
+    <color name="colorPagerThree">#057CDE</color>
 </resources>

@@ -2,7 +2,9 @@ package com.example.adiosesr.androidtraining.util;
 public enum Extras {
 
     EXTRAS_DATANAME("dataname"),
-    EXTRAS_BOOKS("books");
+    EXTRAS_BOOKS("books"),
+    EXTRAS_SECTION_NUMBER("section_number");
+
 
     private String extra;
 

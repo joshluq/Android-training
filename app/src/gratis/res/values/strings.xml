@@ -5,4 +5,7 @@
     <string name="dni">DNI</string>
     <string name="phone">Teléfono</string>
     <string name="buttonSkip">Saltar</string>
+    <string name="descPag01">Obtén los libros que quieras</string>
+    <string name="descPag02">Desde cualquier lugar</string>
+    <string name="descPag03">Solo comprando la aplicación ahora</string>
 </resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimenFourdp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:alpha="0.15"
+        android:background="@color/colorPrimary" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin">
+
+        <Button
+            android:id="@+id/btnSkiPager"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:text="Saltar"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/ibtnBack"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+            android:tint="@color/colorWhite"
+            android:visibility="gone" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/ivIndicator1"
+                android:layout_width="@dimen/dimentwelvedp"
+                android:layout_height="@dimen/dimentwelvedp"
+                android:layout_marginEnd="@dimen/dimenEightdp"
+                android:layout_marginStart="@dimen/dimenEightdp"
+                android:background="@drawable/indicator_unselected"
+                app:layout_constraintEnd_toStartOf="@+id/ivIndicator2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivIndicator2"
+                android:layout_width="@dimen/dimentwelvedp"
+                android:layout_height="@dimen/dimentwelvedp"
+                android:layout_marginEnd="@dimen/dimenEightdp"
+                android:layout_marginStart="@dimen/dimenEightdp"
+                android:background="@drawable/indicator_unselected"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/ivIndicator3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ivIndicator1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/ivIndicator3"
+                android:layout_width="@dimen/dimentwelvedp"
+                android:layout_height="@dimen/dimentwelvedp"
+                android:layout_marginEnd="@dimen/dimenEightdp"
+                android:layout_marginStart="@dimen/dimenEightdp"
+                android:background="@drawable/indicator_unselected"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ivIndicator2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnEnd"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:text="Entrar"
+            android:textColor="@color/colorWhite"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ibtnNext"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_navigate_next_black_24dp"
+            android:tint="@color/colorWhite" />
+    </FrameLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

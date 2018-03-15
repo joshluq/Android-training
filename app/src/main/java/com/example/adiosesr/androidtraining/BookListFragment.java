@@ -50,14 +50,12 @@ public class BookListFragment extends Fragment {
         mAdapater = new BookAdapter(new BookClickListener() {
             @Override
             public void onClick(Book book) {
-                if(BuildConfig.FLAVOR.equals("gratis"))
-                {
-                    Toast.makeText(getActivity(),"Por favor Comprar el App", Toast.LENGTH_LONG).show();
-                    Log.d(LOGTAG,"Seleccionado");
-                }
-                else {
-                    Intent intent = new Intent(getActivity(),StoreActivity.class);
-                    intent.putExtra(Extras.EXTRAS_BOOKS.getExtra(),book);
+                if (BuildConfig.FLAVOR.equals("gratis")) {
+                    Toast.makeText(getActivity(), "Por favor Comprar el App", Toast.LENGTH_LONG).show();
+                    Log.d(LOGTAG, "Seleccionado");
+                } else {
+                    Intent intent = new Intent(getActivity(), StoreActivity.class);
+                    intent.putExtra(Extras.EXTRAS_BOOKS.getExtra(), book);
                     startActivity(intent);
                 }
             }
