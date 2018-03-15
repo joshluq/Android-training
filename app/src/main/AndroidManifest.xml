@@ -13,10 +13,10 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".StoreActivity" />
-        <!--<activity-->
-        <!--android:name=".pager.PagerActivity"-->
-        <!--android:label="@string/title_activity_pager"-->
-        <!--android:theme="@style/AppTheme"/>-->
+        <!-- <activity -->
+        <!-- android:name=".pager.PagerActivity" -->
+        <!-- android:label="@string/title_activity_pager" -->
+        <!-- android:theme="@style/AppTheme"/> -->
     </application>
 
 </manifest>
