@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -32,8 +33,8 @@
     <TextView
         android:id="@+id/tvPrice"
         android:layout_width="@dimen/dimenWidth"
-        android:textStyle="bold"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/tvSimbol"
         app:layout_constraintTop_toTopOf="@+id/tvSimbol"
         tools:text="@tools:sample/date/hhmm" />
@@ -76,8 +77,8 @@
         tools:text="@tools:sample/last_names" />
 
     <ImageView
-        style="@style/Image"
         android:id="@+id/ivBook"
+        style="@style/Image"
         android:layout_width="@dimen/dimenWidth"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dimenFourdp"

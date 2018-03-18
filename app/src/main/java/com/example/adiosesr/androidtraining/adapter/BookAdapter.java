@@ -129,7 +129,8 @@ public class BookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         CardView cvLanguage;
         @BindView(R.id.tvTitle)
         TextView tvTitle;
-
+        @BindView(R.id.ivLanguage)
+        ImageView ivLanguage;
 
          SectionViewHolder(View itemView) {
             super(itemView);
@@ -141,9 +142,12 @@ public class BookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             if(name.equals("Español"))
             {
                 cvLanguage.setBackgroundColor(ContextCompat.getColor(context,R.color.colorPagerOne));
+                Glide.with(itemView).load(R.drawable.spain_language).into(ivLanguage);
+
             }
             else {
                 cvLanguage.setBackgroundColor(ContextCompat.getColor(context,R.color.colorPagerTwo));
+                Glide.with(itemView).load(R.drawable.encglish_language).into(ivLanguage);
             }
         }
     }

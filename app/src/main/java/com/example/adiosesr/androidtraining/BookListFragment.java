@@ -3,10 +3,14 @@ package com.example.adiosesr.androidtraining;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +42,9 @@ public class BookListFragment extends Fragment {
     @BindView(R.id.rvBook)
     RecyclerView rvBook;
 
+    @BindView(R.id.tbToolbar)
+    Toolbar tbToolbar;
+
     BookAdapter mAdapater;
     Service mService;
 
@@ -51,6 +58,11 @@ public class BookListFragment extends Fragment {
     public void onViewCreated(@NonNull final View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
+
+        ((AppCompatActivity)getActivity()).setSupportActionBar(tbToolbar);
+        final ActionBar ab =((AppCompatActivity)getActivity()).getSupportActionBar();
+        ab.setHomeButtonEnabled(true);
+        ab.setDisplayHomeAsUpEnabled(true);
 
         mService = ApiUtil.getService();
         mAdapater = new BookAdapter(new BookClickListener() {
@@ -112,17 +124,16 @@ public class BookListFragment extends Fragment {
         });
     }
 
-    List<BookRow> bookRowListLanguage(String language)
-    {
+    List<BookRow> bookRowListLanguage(String language) {
         List<BookRow> lisLanguage = transform(filterBookLanguage(language));
 
         BookRow languageHeader = new BookRow();
         languageHeader.setHeader(true);
         languageHeader.setName(language);
 
-        lisLanguage.add(0,languageHeader);
+        lisLanguage.add(0, languageHeader);
 
-       return lisLanguage;
+        return lisLanguage;
     }
 
     public List<Book> filterBookLanguage(String key) {

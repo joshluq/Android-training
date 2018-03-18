@@ -13,14 +13,34 @@
     app:layout_constraintTop_toTopOf="parent"
     app:cardBackgroundColor="@color/colorPagerTwo"
     android:id="@+id/cvLanguage">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dimenThreedp">
 
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="@dimen/dimenWidth"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimenEightdp"
+        android:gravity="center"
+        android:textSize="@dimen/dimenTwentysp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivLanguage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/language" />
 
-        <TextView
-            android:layout_gravity="center"
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/dimenTwentysp"
-            android:textStyle="bold"
-            tools:text="@string/app_name" />
+    <ImageView
+        android:id="@+id/ivLanguage"
+        android:layout_width="@dimen/dimenFifty"
+        android:layout_height="@dimen/dimenThirtyTwodp"
+        android:layout_marginEnd="@dimen/dimenEightdp"
+        android:layout_marginTop="@dimen/dimenEightdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+</android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
