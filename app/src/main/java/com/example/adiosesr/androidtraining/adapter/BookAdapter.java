@@ -1,7 +1,8 @@
 package com.example.adiosesr.androidtraining.adapter;
 
 import android.content.Context;
-
+import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,42 +14,62 @@ import com.bumptech.glide.Glide;
 import com.example.adiosesr.androidtraining.BuildConfig;
 import com.example.adiosesr.androidtraining.R;
 import com.example.adiosesr.androidtraining.models.Book;
+import com.example.adiosesr.androidtraining.models.BookRow;
 
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder> {
+public class BookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<Book> mBooks;
+    private static final int SECTION_VIEW = 0;
+    private static final int CONTENT_VIEW = 1;
+
+    private Context context;
+
+    private List<BookRow> listBookRow;
+
+
     private BookClickListener mBookListener;
-
 
     public BookAdapter(BookClickListener mBookListener) {
         this.mBookListener = mBookListener;
     }
 
-    @Override
-    public BookViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Context context = parent.getContext();
 
-        return new BookViewHolder(LayoutInflater.from(context).inflate(R.layout.book_list_row, parent, false),
-                this.mBookListener);
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        context = parent.getContext();
+
+        if (viewType == SECTION_VIEW) {
+            return new SectionViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_content, parent, false));
+        } else {
+            return new BookViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.book_list_row, parent, false), this.mBookListener);
+        }
     }
 
     @Override
-    public void onBindViewHolder(BookViewHolder holder, int position) {
-        holder.bindView(mBooks.get(holder.getLayoutPosition()));
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        if (holder instanceof BookViewHolder) {
+            ((BookViewHolder) holder).bindView(listBookRow.get(position).getBook());
+        } else {
+            ((SectionViewHolder) holder).bindView(listBookRow.get(position).getName());
+        }
     }
 
     @Override
     public int getItemCount() {
-        return mBooks == null ? 0 : mBooks.size();
+        return listBookRow == null ? 0 : listBookRow.size();
     }
 
-    public void updateBooks(List<Book> books) {
-        mBooks = books;
+    @Override
+    public int getItemViewType(int position) {
+        return listBookRow.get(position).isHeader() ? SECTION_VIEW : CONTENT_VIEW;
+    }
+
+    public void updateBooks(List<BookRow> bookRows) {
+        listBookRow = bookRows;
         notifyDataSetChanged();
     }
 
@@ -100,6 +121,30 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
         @Override
         public void onClick(View v) {
             mItemListener.onClick(mBook);
+        }
+    }
+
+    class SectionViewHolder extends RecyclerView.ViewHolder {
+        @BindView(R.id.cvLanguage)
+        CardView cvLanguage;
+        @BindView(R.id.tvTitle)
+        TextView tvTitle;
+
+
+         SectionViewHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+        }
+
+        private void bindView(String name) {
+            tvTitle.setText(name);
+            if(name.equals("Español"))
+            {
+                cvLanguage.setBackgroundColor(ContextCompat.getColor(context,R.color.colorPagerOne));
+            }
+            else {
+                cvLanguage.setBackgroundColor(ContextCompat.getColor(context,R.color.colorPagerTwo));
+            }
         }
     }
 }

@@ -16,10 +16,14 @@ import android.widget.Toast;
 import com.example.adiosesr.androidtraining.adapter.BookAdapter;
 import com.example.adiosesr.androidtraining.adapter.BookClickListener;
 import com.example.adiosesr.androidtraining.models.Book;
+import com.example.adiosesr.androidtraining.models.BookRow;
 import com.example.adiosesr.androidtraining.network.BookResponse;
 import com.example.adiosesr.androidtraining.network.Service;
 import com.example.adiosesr.androidtraining.util.ApiUtil;
 import com.example.adiosesr.androidtraining.util.Extras;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,6 +40,8 @@ public class BookListFragment extends Fragment {
 
     BookAdapter mAdapater;
     Service mService;
+
+    List<Book> mBookList;
 
     public BookListFragment() {
         //empty constructor
@@ -78,12 +84,21 @@ public class BookListFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_book_list, container, false);
     }
 
+
     private void fillList() {
         mService.getBooks().enqueue(new Callback<BookResponse>() {
             @Override
             public void onResponse(@NonNull Call<BookResponse> call, @NonNull Response<BookResponse> response) {
                 if (response.isSuccessful()) {
-                    mAdapater.updateBooks(response.body().getBody().getBooks());
+
+                    mBookList = response.body().getBody().getBooks();
+                    List<BookRow> filteredBooks = new ArrayList<>();
+
+                    filteredBooks.addAll(bookRowListLanguage("Español"));
+                    filteredBooks.addAll(bookRowListLanguage("Ingles"));
+
+                    mAdapater.updateBooks(filteredBooks);
+
                     Log.d(LOGTAG, "Loaded ");
                 } else {
                     Log.d(LOGTAG, " Problem ");
@@ -95,5 +110,47 @@ public class BookListFragment extends Fragment {
                 Log.d(LOGTAG, "Error loading");
             }
         });
+    }
+
+    List<BookRow> bookRowListLanguage(String language)
+    {
+        List<BookRow> lisLanguage = transform(filterBookLanguage(language));
+
+        BookRow languageHeader = new BookRow();
+        languageHeader.setHeader(true);
+        languageHeader.setName(language);
+
+        lisLanguage.add(0,languageHeader);
+
+       return lisLanguage;
+    }
+
+    public List<Book> filterBookLanguage(String key) {
+        List<Book> filterBook = new ArrayList<>();
+
+        for (Book book : mBookList) {
+            if (book.getCountryEd().equals(key)) {
+                filterBook.add(book);
+            }
+        }
+        return filterBook;
+    }
+
+    private BookRow transform(Book mBook) {
+        BookRow mBookRow = new BookRow();
+        mBookRow.setBook(mBook);
+
+        return mBookRow;
+    }
+
+    private List<BookRow> transform(List<Book> listBook) {
+        List<BookRow> mListBookRow = new ArrayList<>();
+
+        if (listBook != null) {
+            for (Book mBook : listBook) {
+                mListBookRow.add(transform(mBook));
+            }
+        }
+        return mListBookRow;
     }
 }
